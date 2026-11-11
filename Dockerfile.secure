@@ -1,0 +1,22 @@
+﻿FROM python:3.12-alpine AS builder
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir --user -r requirements.txt
+
+FROM python:3.12-alpine
+
+WORKDIR /app
+
+RUN addgroup -g 1001 -S appgroup && adduser -u 1001 -S appuser -G appgroup
+
+COPY --from=builder /root/.local /home/appuser/.local
+COPY --chown=appuser:appgroup app.py .
+
+USER appuser
+
+EXPOSE 8080
+
+ENTRYPOINT ["python3"]
+CMD ["app.py"]
