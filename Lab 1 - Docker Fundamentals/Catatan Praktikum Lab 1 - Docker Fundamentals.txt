@@ -1,0 +1,374 @@
+﻿CATATAN PRAKTIKUM P9
+LAB 1 - DOCKER FUNDAMENTALS
+Mata Kuliah: DevOpsSec
+
+Nama  : Dzaki Fasya
+Topik : Dasar-Dasar Docker dan Pengelolaan Container
+
+============================================================
+1. TUJUAN PRAKTIKUM
+============================================================
+
+Praktikum Docker Fundamentals bertujuan untuk memahami konsep dasar
+containerization menggunakan Docker, mengenal perintah Docker CLI,
+menjalankan container dari image, memeriksa container yang berjalan,
+serta mengelola container dan image.
+
+Setelah mempelajari bagian ini, praktikan diharapkan mampu:
+1. Memahami fungsi Docker dalam proses deployment aplikasi.
+2. Membedakan image dan container.
+3. Memeriksa instalasi dan status Docker.
+4. Mengunduh image dari registry.
+5. Membuat dan menjalankan container.
+6. Melihat daftar container dan image.
+7. Mengakses log dan terminal di dalam container.
+8. Menghentikan, menjalankan kembali, dan menghapus container.
+
+Catatan: Dokumen ini merupakan catatan materi dan referensi perintah
+Docker Fundamentals. Perintah di bawah adalah contoh praktik umum.
+Gunakan screenshot atau instruksi modul asli sebagai bukti bahwa setiap
+langkah memang telah dijalankan.
+
+============================================================
+2. PENGENALAN DOCKER
+============================================================
+
+Docker adalah platform untuk membangun, mengemas, dan menjalankan
+aplikasi di dalam container. Container mengemas aplikasi beserta
+komponen yang dibutuhkan agar aplikasi dapat dijalankan secara lebih
+konsisten di lingkungan yang berbeda.
+
+Docker membantu proses pengembangan dan deployment karena aplikasi
+beserta dependensinya dapat dikemas menjadi image, kemudian dijalankan
+sebagai container.
+
+Istilah penting:
+
+A. Docker Engine
+   Komponen utama yang menjalankan dan mengelola container, image,
+   network, dan volume.
+
+B. Docker CLI
+   Antarmuka berbasis command line untuk berkomunikasi dengan Docker
+   Engine. Contohnya perintah docker run, docker ps, dan docker build.
+
+C. Docker Image
+   Template read-only yang berisi aplikasi, runtime, library, dan
+   konfigurasi yang diperlukan untuk membuat container.
+
+D. Docker Container
+   Instance dari image yang sedang atau pernah dijalankan. Container
+   memiliki lingkungan terisolasi dan dapat dibuat, dihentikan,
+   dijalankan kembali, serta dihapus.
+
+E. Docker Registry
+   Tempat penyimpanan dan distribusi image. Docker Hub merupakan salah
+   satu registry publik yang umum digunakan.
+
+F. Dockerfile
+   File instruksi untuk membangun image Docker secara otomatis.
+
+G. Docker Volume
+   Mekanisme untuk menyimpan data agar data dapat tetap tersedia di
+   luar siklus hidup container.
+
+H. Docker Network
+   Mekanisme komunikasi jaringan antara container dan lingkungan lain.
+
+============================================================
+3. PERBEDAAN IMAGE DAN CONTAINER
+============================================================
+
+Image merupakan template yang digunakan untuk membuat container.
+Container merupakan instance dari image.
+
+Analogi sederhana:
+- Image seperti cetakan atau template aplikasi.
+- Container seperti hasil cetakan yang sedang digunakan.
+
+Satu image dapat digunakan untuk membuat beberapa container.
+Perubahan pada filesystem container tidak otomatis mengubah image
+asalnya.
+
+============================================================
+4. MEMERIKSA INSTALASI DOCKER
+============================================================
+
+Periksa versi Docker CLI:
+
+    docker --version
+
+Periksa informasi Docker Engine:
+
+    docker info
+
+Periksa apakah Docker Engine dapat menerima perintah:
+
+    docker version
+
+Keterangan:
+- docker --version menampilkan versi Docker CLI.
+- docker info menampilkan informasi konfigurasi dan kondisi Docker.
+- docker version menampilkan informasi versi client dan server.
+
+Jika perintah docker info gagal terhubung ke daemon, pastikan Docker
+Desktop sudah berjalan dan Docker Engine telah aktif.
+
+============================================================
+5. MENGUNDUH IMAGE
+============================================================
+
+Contoh mengunduh image hello-world:
+
+    docker pull hello-world
+
+Contoh mengunduh image Nginx:
+
+    docker pull nginx:alpine
+
+Keterangan:
+- docker pull digunakan untuk mengunduh image dari registry.
+- hello-world merupakan image sederhana untuk pengujian Docker.
+- nginx:alpine merupakan image Nginx dengan basis Alpine Linux.
+- Tag digunakan untuk menentukan varian atau versi image.
+
+Melihat daftar image lokal:
+
+    docker images
+
+Alternatif:
+
+    docker image ls
+
+============================================================
+6. MENJALANKAN CONTAINER
+============================================================
+
+Menjalankan container pengujian:
+
+    docker run hello-world
+
+Docker akan menggunakan image hello-world. Jika image belum tersedia
+secara lokal, Docker akan mengunduhnya terlebih dahulu.
+
+Menjalankan container Nginx di background:
+
+    docker run -d --name web-nginx -p 8080:80 nginx:alpine
+
+Keterangan:
+- docker run membuat dan menjalankan container.
+- -d menjalankan container di background (detached mode).
+- --name web-nginx memberikan nama pada container.
+- -p 8080:80 memetakan port 8080 host ke port 80 container.
+- nginx:alpine adalah image yang digunakan.
+
+Setelah container berjalan, layanan Nginx dapat diuji melalui browser
+pada alamat:
+
+    http://localhost:8080
+
+Catatan: Perintah Nginx di atas merupakan contoh. Sesuaikan nama
+container dan port apabila instruksi praktikum menggunakan nilai lain.
+
+============================================================
+7. MEMERIKSA STATUS CONTAINER
+============================================================
+
+Melihat container yang sedang berjalan:
+
+    docker ps
+
+Melihat seluruh container, termasuk yang sudah berhenti:
+
+    docker ps -a
+
+Melihat informasi ringkas container tertentu:
+
+    docker inspect web-nginx
+
+Melihat penggunaan resource container:
+
+    docker stats
+
+Keterangan:
+- docker ps hanya menampilkan container yang sedang berjalan.
+- docker ps -a menampilkan seluruh container.
+- docker inspect menampilkan detail konfigurasi container.
+- docker stats menampilkan penggunaan CPU, memory, dan resource lain.
+
+============================================================
+8. MELIHAT LOG DAN MENGAKSES CONTAINER
+============================================================
+
+Melihat log container:
+
+    docker logs web-nginx
+
+Mengikuti log secara langsung:
+
+    docker logs -f web-nginx
+
+Menjalankan shell di dalam container:
+
+    docker exec -it web-nginx sh
+
+Keluar dari shell container:
+
+    exit
+
+Keterangan:
+- docker logs digunakan untuk melihat keluaran proses container.
+- Opsi -f mengikuti log secara real-time.
+- docker exec menjalankan perintah di dalam container yang sedang aktif.
+- Opsi -it menyediakan terminal interaktif.
+
+Tidak semua image menyediakan shell bash. Image berbasis Alpine
+umumnya menyediakan sh.
+
+============================================================
+9. MENGHENTIKAN DAN MENJALANKAN KEMBALI CONTAINER
+============================================================
+
+Menghentikan container:
+
+    docker stop web-nginx
+
+Melihat status container:
+
+    docker ps -a
+
+Menjalankan kembali container yang sudah berhenti:
+
+    docker start web-nginx
+
+Memulai ulang container:
+
+    docker restart web-nginx
+
+Keterangan:
+- docker stop menghentikan container secara normal.
+- docker start menjalankan kembali container yang sudah ada.
+- docker restart menghentikan lalu menjalankan kembali container.
+
+============================================================
+10. MENGHAPUS CONTAINER DAN IMAGE
+============================================================
+
+Menghapus container yang sudah berhenti:
+
+    docker rm web-nginx
+
+Jika container masih berjalan, hentikan terlebih dahulu:
+
+    docker stop web-nginx
+    docker rm web-nginx
+
+Menghapus image:
+
+    docker rmi nginx:alpine
+
+Image tidak dapat dihapus jika masih digunakan oleh container yang
+bergantung padanya. Hapus atau lepaskan container terkait terlebih
+dahulu jika diperlukan.
+
+Melihat penggunaan ruang Docker:
+
+    docker system df
+
+Membersihkan resource yang tidak digunakan:
+
+    docker system prune
+
+Perhatian:
+Perintah pembersihan dapat menghapus resource Docker yang tidak
+digunakan. Periksa konfirmasi dan dampaknya sebelum menjalankan
+perintah tersebut. Jangan gunakan opsi penghapusan paksa atau
+penghapusan volume tanpa memahami konsekuensinya.
+
+============================================================
+11. RINGKASAN PERINTAH DOCKER
+============================================================
+
+    docker --version       Memeriksa versi Docker CLI
+    docker version         Melihat versi client dan server
+    docker info            Melihat informasi Docker Engine
+    docker pull IMAGE      Mengunduh image
+    docker images          Melihat daftar image lokal
+    docker run IMAGE       Membuat dan menjalankan container
+    docker ps              Melihat container yang berjalan
+    docker ps -a           Melihat seluruh container
+    docker logs NAMA       Melihat log container
+    docker exec -it NAMA sh
+                           Membuka shell container
+    docker stop NAMA       Menghentikan container
+    docker start NAMA      Menjalankan kembali container
+    docker restart NAMA    Memulai ulang container
+    docker rm NAMA         Menghapus container
+    docker rmi IMAGE       Menghapus image
+    docker stats           Melihat penggunaan resource
+    docker inspect NAMA    Melihat detail container
+    docker system df       Melihat penggunaan disk Docker
+    docker system prune    Membersihkan resource tidak terpakai
+
+Ganti IMAGE dan NAMA dengan nama image atau container yang sesuai.
+
+============================================================
+12. KONSEP KEAMANAN DASAR CONTAINER
+============================================================
+
+Beberapa hal yang perlu diperhatikan ketika menggunakan Docker:
+
+1. Gunakan image resmi atau image dari sumber yang dapat dipercaya.
+2. Hindari menggunakan tag yang tidak jelas atau tidak terkontrol.
+3. Perbarui image dan package untuk memperoleh perbaikan keamanan.
+4. Jangan menaruh password, token, atau API key langsung di Dockerfile.
+5. Jalankan aplikasi dengan user non-root jika memungkinkan.
+6. Batasi port yang diekspos sesuai kebutuhan.
+7. Hapus container dan image yang tidak lagi digunakan.
+8. Lakukan vulnerability scanning terhadap image.
+9. Gunakan Dockerfile yang sederhana dan hanya memasukkan file yang
+   diperlukan.
+10. Jangan menganggap container sebagai pengganti seluruh kontrol
+    keamanan host.
+
+Konsep keamanan ini menjadi dasar untuk praktikum lanjutan, khususnya
+Trivy Scanning, Secure Dockerfile, dan GitHub Actions.
+
+============================================================
+13. CHECKLIST DOKUMENTASI LAB 1
+============================================================
+
+Gunakan checklist ini untuk mencocokkan bukti dengan instruksi modul
+dan screenshot yang benar-benar dimiliki.
+
+[ ] Bukti Docker terpasang dan versi dapat ditampilkan.
+[ ] Bukti Docker Engine berjalan.
+[ ] Bukti image berhasil diunduh.
+[ ] Bukti container berhasil dibuat dan dijalankan.
+[ ] Bukti daftar container ditampilkan.
+[ ] Bukti aplikasi/container dapat diuji jika diminta modul.
+[ ] Bukti log atau akses container jika diminta modul.
+[ ] Bukti container dapat dihentikan atau dihapus jika diminta modul.
+
+Jangan mencentang langkah hanya berdasarkan contoh perintah di dokumen.
+Centang setelah langkah tersebut benar-benar dilakukan dan memiliki
+bukti yang sesuai.
+
+============================================================
+14. KESIMPULAN
+============================================================
+
+Docker mempermudah pengemasan dan pengoperasian aplikasi melalui
+image dan container. Image berfungsi sebagai template, sedangkan
+container merupakan instance image yang dijalankan. Docker CLI
+menyediakan perintah untuk mengunduh image, menjalankan container,
+memeriksa status, melihat log, mengakses lingkungan container, serta
+mengelola resource.
+
+Pemahaman Docker Fundamentals menjadi dasar sebelum melakukan
+pemeriksaan kerentanan image menggunakan Trivy, membuat Dockerfile
+yang lebih aman, dan mengotomatisasi pemindaian melalui GitHub Actions.
+
+============================================================
+AKHIR CATATAN LAB 1
+============================================================
