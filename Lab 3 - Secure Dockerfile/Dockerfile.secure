@@ -1,4 +1,6 @@
-﻿FROM python:3.12-alpine AS builder
+FROM python:3.12-alpine AS builder
+
+RUN apk update && apk upgrade --no-cache
 
 WORKDIR /app
 
@@ -6,6 +8,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --user -r requirements.txt
 
 FROM python:3.12-alpine
+
+RUN apk update && apk upgrade --no-cache
 
 WORKDIR /app
 
