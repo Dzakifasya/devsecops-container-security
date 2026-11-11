@@ -1,0 +1,2595 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/main/sarif-2.1/schema/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "fullName": "Trivy Vulnerability Scanner",
+          "informationUri": "https://github.com/aquasecurity/trivy",
+          "name": "Trivy",
+          "rules": [
+            {
+              "id": "CVE-2018-20843",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "expat: large number of colons in input makes parser consume high amount of resources, leading to DoS"
+              },
+              "fullDescription": {
+                "text": "In libexpat in Expat before 2.2.7, XML input including XML names that contain a large number of colons could make the XML parser consume a high amount of RAM and CPU resources while processing (enough to be usable for denial-of-service attacks)."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2018-20843",
+              "help": {
+                "text": "Vulnerability CVE-2018-20843\nSeverity: HIGH\nPackage: expat\nFixed Version: 2.2.7-r0\nLink: [CVE-2018-20843](https://avd.aquasec.com/nvd/cve-2018-20843)\nIn libexpat in Expat before 2.2.7, XML input including XML names that contain a large number of colons could make the XML parser consume a high amount of RAM and CPU resources while processing (enough to be usable for denial-of-service attacks).",
+                "markdown": "**Vulnerability CVE-2018-20843**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|expat|2.2.7-r0|[CVE-2018-20843](https://avd.aquasec.com/nvd/cve-2018-20843)|\n\nIn libexpat in Expat before 2.2.7, XML input including XML names that contain a large number of colons could make the XML parser consume a high amount of RAM and CPU resources while processing (enough to be usable for denial-of-service attacks)."
+              },
+              "properties": {
+                "cvssv2_score": 7.8,
+                "cvssv2_vector": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-15903",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "expat: heap-based buffer over-read via crafted XML input"
+              },
+              "fullDescription": {
+                "text": "In libexpat before 2.2.8, crafted XML input could fool the parser into changing from DTD parsing to document parsing too early; a consecutive call to XML_GetCurrentLineNumber (or XML_GetCurrentColumnNumber) then resulted in a heap-based buffer over-read."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-15903",
+              "help": {
+                "text": "Vulnerability CVE-2019-15903\nSeverity: HIGH\nPackage: expat\nFixed Version: 2.2.7-r1\nLink: [CVE-2019-15903](https://avd.aquasec.com/nvd/cve-2019-15903)\nIn libexpat before 2.2.8, crafted XML input could fool the parser into changing from DTD parsing to document parsing too early; a consecutive call to XML_GetCurrentLineNumber (or XML_GetCurrentColumnNumber) then resulted in a heap-based buffer over-read.",
+                "markdown": "**Vulnerability CVE-2019-15903**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|expat|2.2.7-r1|[CVE-2019-15903](https://avd.aquasec.com/nvd/cve-2019-15903)|\n\nIn libexpat before 2.2.8, crafted XML input could fool the parser into changing from DTD parsing to document parsing too early; a consecutive call to XML_GetCurrentLineNumber (or XML_GetCurrentColumnNumber) then resulted in a heap-based buffer over-read."
+              },
+              "properties": {
+                "cvssv2_score": 5,
+                "cvssv2_vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-12900",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "bzip2: bzip2: Data integrity error when decompressing (with data integrity tests fail)."
+              },
+              "fullDescription": {
+                "text": "BZ2_decompress in decompress.c in bzip2 through 1.0.6 has an out-of-bounds write when there are many selectors."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-12900",
+              "help": {
+                "text": "Vulnerability CVE-2019-12900\nSeverity: CRITICAL\nPackage: libbz2\nFixed Version: 1.0.6-r7\nLink: [CVE-2019-12900](https://avd.aquasec.com/nvd/cve-2019-12900)\nBZ2_decompress in decompress.c in bzip2 through 1.0.6 has an out-of-bounds write when there are many selectors.",
+                "markdown": "**Vulnerability CVE-2019-12900**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|CRITICAL|libbz2|1.0.6-r7|[CVE-2019-12900](https://avd.aquasec.com/nvd/cve-2019-12900)|\n\nBZ2_decompress in decompress.c in bzip2 through 1.0.6 has an out-of-bounds write when there are many selectors."
+              },
+              "properties": {
+                "cvssv2_score": 7.5,
+                "cvssv2_vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "cvssv3_baseScore": 9.8,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "precision": "very-high",
+                "security-severity": "9.8",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-1543",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "openssl: ChaCha20-Poly1305 with long nonces"
+              },
+              "fullDescription": {
+                "text": "ChaCha20-Poly1305 is an AEAD cipher, and requires a unique nonce input for every encryption operation. RFC 7539 specifies that the nonce value (IV) should be 96 bits (12 bytes). OpenSSL allows a variable nonce length and front pads the nonce with 0 bytes if it is less than 12 bytes. However it also incorrectly allows a nonce to be set of up to 16 bytes. In this case only the last 12 bytes are significant and any additional leading bytes are ignored. It is a requirement of using this cipher that nonce values are unique. Messages encrypted using a reused nonce value are susceptible to serious confidentiality and integrity attacks. If an application changes the default nonce length to be longer than 12 bytes and then makes a change to the leading bytes of the nonce expecting the new value to be a new unique nonce then such an application could inadvertently encrypt messages with a reused nonce. Additionally the ignored bytes in a long nonce are not covered by the integrity guarantee of this cipher. Any application that relies on the integrity of these ignored leading bytes of a long nonce may be further affected. Any OpenSSL internal use of this cipher, including in SSL/TLS, is safe because no such use sets such a long nonce value. However user applications that use this cipher directly and set a non-default nonce length to be longer than 12 bytes may be vulnerable. OpenSSL versions 1.1.1 and 1.1.0 are affected by this issue. Due to the limited scope of affected deployments this has been assessed as low severity and therefore we are not creating new releases at this time. Fixed in OpenSSL 1.1.1c (Affected 1.1.1-1.1.1b). Fixed in OpenSSL 1.1.0k (Affected 1.1.0-1.1.0j)."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-1543",
+              "help": {
+                "text": "Vulnerability CVE-2019-1543\nSeverity: HIGH\nPackage: libssl1.1\nFixed Version: 1.1.1b-r1\nLink: [CVE-2019-1543](https://avd.aquasec.com/nvd/cve-2019-1543)\nChaCha20-Poly1305 is an AEAD cipher, and requires a unique nonce input for every encryption operation. RFC 7539 specifies that the nonce value (IV) should be 96 bits (12 bytes). OpenSSL allows a variable nonce length and front pads the nonce with 0 bytes if it is less than 12 bytes. However it also incorrectly allows a nonce to be set of up to 16 bytes. In this case only the last 12 bytes are significant and any additional leading bytes are ignored. It is a requirement of using this cipher that nonce values are unique. Messages encrypted using a reused nonce value are susceptible to serious confidentiality and integrity attacks. If an application changes the default nonce length to be longer than 12 bytes and then makes a change to the leading bytes of the nonce expecting the new value to be a new unique nonce then such an application could inadvertently encrypt messages with a reused nonce. Additionally the ignored bytes in a long nonce are not covered by the integrity guarantee of this cipher. Any application that relies on the integrity of these ignored leading bytes of a long nonce may be further affected. Any OpenSSL internal use of this cipher, including in SSL/TLS, is safe because no such use sets such a long nonce value. However user applications that use this cipher directly and set a non-default nonce length to be longer than 12 bytes may be vulnerable. OpenSSL versions 1.1.1 and 1.1.0 are affected by this issue. Due to the limited scope of affected deployments this has been assessed as low severity and therefore we are not creating new releases at this time. Fixed in OpenSSL 1.1.1c (Affected 1.1.1-1.1.1b). Fixed in OpenSSL 1.1.0k (Affected 1.1.0-1.1.0j).",
+                "markdown": "**Vulnerability CVE-2019-1543**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|libssl1.1|1.1.1b-r1|[CVE-2019-1543](https://avd.aquasec.com/nvd/cve-2019-1543)|\n\nChaCha20-Poly1305 is an AEAD cipher, and requires a unique nonce input for every encryption operation. RFC 7539 specifies that the nonce value (IV) should be 96 bits (12 bytes). OpenSSL allows a variable nonce length and front pads the nonce with 0 bytes if it is less than 12 bytes. However it also incorrectly allows a nonce to be set of up to 16 bytes. In this case only the last 12 bytes are significant and any additional leading bytes are ignored. It is a requirement of using this cipher that nonce values are unique. Messages encrypted using a reused nonce value are susceptible to serious confidentiality and integrity attacks. If an application changes the default nonce length to be longer than 12 bytes and then makes a change to the leading bytes of the nonce expecting the new value to be a new unique nonce then such an application could inadvertently encrypt messages with a reused nonce. Additionally the ignored bytes in a long nonce are not covered by the integrity guarantee of this cipher. Any application that relies on the integrity of these ignored leading bytes of a long nonce may be further affected. Any OpenSSL internal use of this cipher, including in SSL/TLS, is safe because no such use sets such a long nonce value. However user applications that use this cipher directly and set a non-default nonce length to be longer than 12 bytes may be vulnerable. OpenSSL versions 1.1.1 and 1.1.0 are affected by this issue. Due to the limited scope of affected deployments this has been assessed as low severity and therefore we are not creating new releases at this time. Fixed in OpenSSL 1.1.1c (Affected 1.1.1-1.1.1b). Fixed in OpenSSL 1.1.0k (Affected 1.1.0-1.1.0j)."
+              },
+              "properties": {
+                "cvssv2_score": 5.8,
+                "cvssv2_vector": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+                "cvssv3_baseScore": 7.4,
+                "cvssv3_vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "precision": "very-high",
+                "security-severity": "7.4",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-1967",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "openssl: Segmentation fault in SSL_check_chain causes denial of service"
+              },
+              "fullDescription": {
+                "text": "Server or client applications that call the SSL_check_chain() function during or after a TLS 1.3 handshake may crash due to a NULL pointer dereference as a result of incorrect handling of the \"signature_algorithms_cert\" TLS extension. The crash occurs if an invalid or unrecognised signature algorithm is received from the peer. This could be exploited by a malicious peer in a Denial of Service attack. OpenSSL version 1.1.1d, 1.1.1e, and 1.1.1f are affected by this issue. This issue did not affect OpenSSL versions prior to 1.1.1d. Fixed in OpenSSL 1.1.1g (Affected 1.1.1d-1.1.1f)."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2020-1967",
+              "help": {
+                "text": "Vulnerability CVE-2020-1967\nSeverity: HIGH\nPackage: libssl1.1\nFixed Version: 1.1.1g-r0\nLink: [CVE-2020-1967](https://avd.aquasec.com/nvd/cve-2020-1967)\nServer or client applications that call the SSL_check_chain() function during or after a TLS 1.3 handshake may crash due to a NULL pointer dereference as a result of incorrect handling of the \"signature_algorithms_cert\" TLS extension. The crash occurs if an invalid or unrecognised signature algorithm is received from the peer. This could be exploited by a malicious peer in a Denial of Service attack. OpenSSL version 1.1.1d, 1.1.1e, and 1.1.1f are affected by this issue. This issue did not affect OpenSSL versions prior to 1.1.1d. Fixed in OpenSSL 1.1.1g (Affected 1.1.1d-1.1.1f).",
+                "markdown": "**Vulnerability CVE-2020-1967**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|libssl1.1|1.1.1g-r0|[CVE-2020-1967](https://avd.aquasec.com/nvd/cve-2020-1967)|\n\nServer or client applications that call the SSL_check_chain() function during or after a TLS 1.3 handshake may crash due to a NULL pointer dereference as a result of incorrect handling of the \"signature_algorithms_cert\" TLS extension. The crash occurs if an invalid or unrecognised signature algorithm is received from the peer. This could be exploited by a malicious peer in a Denial of Service attack. OpenSSL version 1.1.1d, 1.1.1e, and 1.1.1f are affected by this issue. This issue did not affect OpenSSL versions prior to 1.1.1d. Fixed in OpenSSL 1.1.1g (Affected 1.1.1d-1.1.1f)."
+              },
+              "properties": {
+                "cvssv2_score": 5,
+                "cvssv2_vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-23840",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "openssl: integer overflow in CipherUpdate"
+              },
+              "fullDescription": {
+                "text": "Calls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow the output length argument in some cases where the input length is close to the maximum permissable length for an integer on the platform. In such cases the return value from the function call will be 1 (indicating success), but the output length value will be negative. This could cause applications to behave incorrectly or crash. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x)."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-23840",
+              "help": {
+                "text": "Vulnerability CVE-2021-23840\nSeverity: HIGH\nPackage: libssl1.1\nFixed Version: 1.1.1j-r0\nLink: [CVE-2021-23840](https://avd.aquasec.com/nvd/cve-2021-23840)\nCalls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow the output length argument in some cases where the input length is close to the maximum permissable length for an integer on the platform. In such cases the return value from the function call will be 1 (indicating success), but the output length value will be negative. This could cause applications to behave incorrectly or crash. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x).",
+                "markdown": "**Vulnerability CVE-2021-23840**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|libssl1.1|1.1.1j-r0|[CVE-2021-23840](https://avd.aquasec.com/nvd/cve-2021-23840)|\n\nCalls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow the output length argument in some cases where the input length is close to the maximum permissable length for an integer on the platform. In such cases the return value from the function call will be 1 (indicating success), but the output length value will be negative. This could cause applications to behave incorrectly or crash. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x)."
+              },
+              "properties": {
+                "cvssv2_score": 5,
+                "cvssv2_vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-3450",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT"
+              },
+              "fullDescription": {
+                "text": "The X509_V_FLAG_X509_STRICT flag enables additional security checks of the certificates present in a certificate chain. It is not set by default. Starting from OpenSSL version 1.1.1h a check to disallow certificates in the chain that have explicitly encoded elliptic curve parameters was added as an additional strict check. An error in the implementation of this check meant that the result of a previous check to confirm that certificates in the chain are valid CA certificates was overwritten. This effectively bypasses the check that non-CA certificates must not be able to issue other certificates. If a \"purpose\" has been configured then there is a subsequent opportunity for checks that the certificate is a valid CA. All of the named \"purpose\" values implemented in libcrypto perform this check. Therefore, where a purpose is set the certificate chain will still be rejected even when the strict flag has been used. A purpose is set by default in libssl client and server certificate verification routines, but it can be overridden or removed by an application. In order to be affected, an application must explicitly set the X509_V_FLAG_X509_STRICT verification flag and either not set a purpose for the certificate verification or, in the case of TLS client or server applications, override the default purpose. OpenSSL versions 1.1.1h and newer are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1h-1.1.1j)."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-3450",
+              "help": {
+                "text": "Vulnerability CVE-2021-3450\nSeverity: HIGH\nPackage: libssl1.1\nFixed Version: 1.1.1k-r0\nLink: [CVE-2021-3450](https://avd.aquasec.com/nvd/cve-2021-3450)\nThe X509_V_FLAG_X509_STRICT flag enables additional security checks of the certificates present in a certificate chain. It is not set by default. Starting from OpenSSL version 1.1.1h a check to disallow certificates in the chain that have explicitly encoded elliptic curve parameters was added as an additional strict check. An error in the implementation of this check meant that the result of a previous check to confirm that certificates in the chain are valid CA certificates was overwritten. This effectively bypasses the check that non-CA certificates must not be able to issue other certificates. If a \"purpose\" has been configured then there is a subsequent opportunity for checks that the certificate is a valid CA. All of the named \"purpose\" values implemented in libcrypto perform this check. Therefore, where a purpose is set the certificate chain will still be rejected even when the strict flag has been used. A purpose is set by default in libssl client and server certificate verification routines, but it can be overridden or removed by an application. In order to be affected, an application must explicitly set the X509_V_FLAG_X509_STRICT verification flag and either not set a purpose for the certificate verification or, in the case of TLS client or server applications, override the default purpose. OpenSSL versions 1.1.1h and newer are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1h-1.1.1j).",
+                "markdown": "**Vulnerability CVE-2021-3450**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|libssl1.1|1.1.1k-r0|[CVE-2021-3450](https://avd.aquasec.com/nvd/cve-2021-3450)|\n\nThe X509_V_FLAG_X509_STRICT flag enables additional security checks of the certificates present in a certificate chain. It is not set by default. Starting from OpenSSL version 1.1.1h a check to disallow certificates in the chain that have explicitly encoded elliptic curve parameters was added as an additional strict check. An error in the implementation of this check meant that the result of a previous check to confirm that certificates in the chain are valid CA certificates was overwritten. This effectively bypasses the check that non-CA certificates must not be able to issue other certificates. If a \"purpose\" has been configured then there is a subsequent opportunity for checks that the certificate is a valid CA. All of the named \"purpose\" values implemented in libcrypto perform this check. Therefore, where a purpose is set the certificate chain will still be rejected even when the strict flag has been used. A purpose is set by default in libssl client and server certificate verification routines, but it can be overridden or removed by an application. In order to be affected, an application must explicitly set the X509_V_FLAG_X509_STRICT verification flag and either not set a purpose for the certificate verification or, in the case of TLS client or server applications, override the default purpose. OpenSSL versions 1.1.1h and newer are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1h-1.1.1j)."
+              },
+              "properties": {
+                "cvssv2_score": 5.8,
+                "cvssv2_vector": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+                "cvssv3_baseScore": 7.4,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "precision": "very-high",
+                "security-severity": "7.4",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-1547",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "openssl: side-channel weak encryption vulnerability"
+              },
+              "fullDescription": {
+                "text": "Normally in OpenSSL EC groups always have a co-factor present and this is used in side channel resistant code paths. However, in some cases, it is possible to construct a group using explicit parameters (instead of using a named curve). In those cases it is possible that such a group does not have the cofactor present. This can occur even where all the parameters match a known named curve. If such a curve is used then OpenSSL falls back to non-side channel resistant code paths which may result in full key recovery during an ECDSA signature operation. In order to be vulnerable an attacker would have to have the ability to time the creation of a large number of signatures where explicit parameters with no co-factor present are in use by an application using libcrypto. For the avoidance of doubt libssl is not vulnerable because explicit parameters are never used. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s)."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-1547",
+              "help": {
+                "text": "Vulnerability CVE-2019-1547\nSeverity: MEDIUM\nPackage: libssl1.1\nFixed Version: 1.1.1d-r0\nLink: [CVE-2019-1547](https://avd.aquasec.com/nvd/cve-2019-1547)\nNormally in OpenSSL EC groups always have a co-factor present and this is used in side channel resistant code paths. However, in some cases, it is possible to construct a group using explicit parameters (instead of using a named curve). In those cases it is possible that such a group does not have the cofactor present. This can occur even where all the parameters match a known named curve. If such a curve is used then OpenSSL falls back to non-side channel resistant code paths which may result in full key recovery during an ECDSA signature operation. In order to be vulnerable an attacker would have to have the ability to time the creation of a large number of signatures where explicit parameters with no co-factor present are in use by an application using libcrypto. For the avoidance of doubt libssl is not vulnerable because explicit parameters are never used. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s).",
+                "markdown": "**Vulnerability CVE-2019-1547**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libssl1.1|1.1.1d-r0|[CVE-2019-1547](https://avd.aquasec.com/nvd/cve-2019-1547)|\n\nNormally in OpenSSL EC groups always have a co-factor present and this is used in side channel resistant code paths. However, in some cases, it is possible to construct a group using explicit parameters (instead of using a named curve). In those cases it is possible that such a group does not have the cofactor present. This can occur even where all the parameters match a known named curve. If such a curve is used then OpenSSL falls back to non-side channel resistant code paths which may result in full key recovery during an ECDSA signature operation. In order to be vulnerable an attacker would have to have the ability to time the creation of a large number of signatures where explicit parameters with no co-factor present are in use by an application using libcrypto. For the avoidance of doubt libssl is not vulnerable because explicit parameters are never used. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s)."
+              },
+              "properties": {
+                "cvssv2_score": 1.9,
+                "cvssv2_vector": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+                "cvssv3_baseScore": 4.7,
+                "cvssv3_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "precision": "very-high",
+                "security-severity": "4.7",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-1549",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "openssl: information disclosure in fork()"
+              },
+              "fullDescription": {
+                "text": "OpenSSL 1.1.1 introduced a rewritten random number generator (RNG). This was intended to include protection in the event of a fork() system call in order to ensure that the parent and child processes did not share the same RNG state. However this protection was not being used in the default case. A partial mitigation for this issue is that the output from a high precision timer is mixed into the RNG state so the likelihood of a parent and child process sharing state is significantly reduced. If an application already calls OPENSSL_init_crypto() explicitly using OPENSSL_INIT_ATFORK then this problem does not occur at all. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c)."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-1549",
+              "help": {
+                "text": "Vulnerability CVE-2019-1549\nSeverity: MEDIUM\nPackage: libssl1.1\nFixed Version: 1.1.1d-r0\nLink: [CVE-2019-1549](https://avd.aquasec.com/nvd/cve-2019-1549)\nOpenSSL 1.1.1 introduced a rewritten random number generator (RNG). This was intended to include protection in the event of a fork() system call in order to ensure that the parent and child processes did not share the same RNG state. However this protection was not being used in the default case. A partial mitigation for this issue is that the output from a high precision timer is mixed into the RNG state so the likelihood of a parent and child process sharing state is significantly reduced. If an application already calls OPENSSL_init_crypto() explicitly using OPENSSL_INIT_ATFORK then this problem does not occur at all. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c).",
+                "markdown": "**Vulnerability CVE-2019-1549**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libssl1.1|1.1.1d-r0|[CVE-2019-1549](https://avd.aquasec.com/nvd/cve-2019-1549)|\n\nOpenSSL 1.1.1 introduced a rewritten random number generator (RNG). This was intended to include protection in the event of a fork() system call in order to ensure that the parent and child processes did not share the same RNG state. However this protection was not being used in the default case. A partial mitigation for this issue is that the output from a high precision timer is mixed into the RNG state so the likelihood of a parent and child process sharing state is significantly reduced. If an application already calls OPENSSL_init_crypto() explicitly using OPENSSL_INIT_ATFORK then this problem does not occur at all. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c)."
+              },
+              "properties": {
+                "cvssv2_score": 5,
+                "cvssv2_vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "cvssv3_baseScore": 5.3,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "precision": "very-high",
+                "security-severity": "5.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-1551",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "openssl: Integer overflow in RSAZ modular exponentiation on x86_64"
+              },
+              "fullDescription": {
+                "text": "There is an overflow bug in the x64_64 Montgomery squaring procedure used in exponentiation with 512-bit moduli. No EC algorithms are affected. Analysis suggests that attacks against 2-prime RSA1024, 3-prime RSA1536, and DSA1024 as a result of this defect would be very difficult to perform and are not believed likely. Attacks against DH512 are considered just feasible. However, for an attack the target would have to re-use the DH512 private key, which is not recommended anyway. Also applications directly using the low level API BN_mod_exp may be affected if they use BN_FLG_CONSTTIME. Fixed in OpenSSL 1.1.1e (Affected 1.1.1-1.1.1d). Fixed in OpenSSL 1.0.2u (Affected 1.0.2-1.0.2t)."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-1551",
+              "help": {
+                "text": "Vulnerability CVE-2019-1551\nSeverity: MEDIUM\nPackage: libssl1.1\nFixed Version: 1.1.1d-r2\nLink: [CVE-2019-1551](https://avd.aquasec.com/nvd/cve-2019-1551)\nThere is an overflow bug in the x64_64 Montgomery squaring procedure used in exponentiation with 512-bit moduli. No EC algorithms are affected. Analysis suggests that attacks against 2-prime RSA1024, 3-prime RSA1536, and DSA1024 as a result of this defect would be very difficult to perform and are not believed likely. Attacks against DH512 are considered just feasible. However, for an attack the target would have to re-use the DH512 private key, which is not recommended anyway. Also applications directly using the low level API BN_mod_exp may be affected if they use BN_FLG_CONSTTIME. Fixed in OpenSSL 1.1.1e (Affected 1.1.1-1.1.1d). Fixed in OpenSSL 1.0.2u (Affected 1.0.2-1.0.2t).",
+                "markdown": "**Vulnerability CVE-2019-1551**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libssl1.1|1.1.1d-r2|[CVE-2019-1551](https://avd.aquasec.com/nvd/cve-2019-1551)|\n\nThere is an overflow bug in the x64_64 Montgomery squaring procedure used in exponentiation with 512-bit moduli. No EC algorithms are affected. Analysis suggests that attacks against 2-prime RSA1024, 3-prime RSA1536, and DSA1024 as a result of this defect would be very difficult to perform and are not believed likely. Attacks against DH512 are considered just feasible. However, for an attack the target would have to re-use the DH512 private key, which is not recommended anyway. Also applications directly using the low level API BN_mod_exp may be affected if they use BN_FLG_CONSTTIME. Fixed in OpenSSL 1.1.1e (Affected 1.1.1-1.1.1d). Fixed in OpenSSL 1.0.2u (Affected 1.0.2-1.0.2t)."
+              },
+              "properties": {
+                "cvssv2_score": 5,
+                "cvssv2_vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "cvssv3_baseScore": 5.3,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "precision": "very-high",
+                "security-severity": "5.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-1971",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "openssl: EDIPARTYNAME NULL pointer de-reference"
+              },
+              "fullDescription": {
+                "text": "The X.509 GeneralName type is a generic type for representing different types of names. One of those name types is known as EDIPartyName. OpenSSL provides a function GENERAL_NAME_cmp which compares different instances of a GENERAL_NAME to see if they are equal or not. This function behaves incorrectly when both GENERAL_NAMEs contain an EDIPARTYNAME. A NULL pointer dereference and a crash may occur leading to a possible denial of service attack. OpenSSL itself uses the GENERAL_NAME_cmp function for two purposes: 1) Comparing CRL distribution point names between an available CRL and a CRL distribution point embedded in an X509 certificate 2) When verifying that a timestamp response token signer matches the timestamp authority name (exposed via the API functions TS_RESP_verify_response and TS_RESP_verify_token) If an attacker can control both items being compared then that attacker could trigger a crash. For example if the attacker can trick a client or server into checking a malicious certificate against a malicious CRL then this may occur. Note that some applications automatically download CRLs based on a URL embedded in a certificate. This checking happens prior to the signatures on the certificate and CRL being verified. OpenSSL's s_server, s_client and verify tools have support for the \"-crl_download\" option which implements automatic CRL downloading and this attack has been demonstrated to work against those tools. Note that an unrelated bug means that affected versions of OpenSSL cannot parse or construct correct encodings of EDIPARTYNAME. However it is possible to construct a malformed EDIPARTYNAME that OpenSSL's parser will accept and hence trigger this attack. All OpenSSL 1.1.1 and 1.0.2 versions are affected by this issue. Other OpenSSL releases are out of support and have not been checked. Fixed in OpenSSL 1.1.1i (Affected 1.1.1-1.1.1h). Fixed in OpenSSL 1.0.2x (Affected 1.0.2-1.0.2w)."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2020-1971",
+              "help": {
+                "text": "Vulnerability CVE-2020-1971\nSeverity: MEDIUM\nPackage: libssl1.1\nFixed Version: 1.1.1i-r0\nLink: [CVE-2020-1971](https://avd.aquasec.com/nvd/cve-2020-1971)\nThe X.509 GeneralName type is a generic type for representing different types of names. One of those name types is known as EDIPartyName. OpenSSL provides a function GENERAL_NAME_cmp which compares different instances of a GENERAL_NAME to see if they are equal or not. This function behaves incorrectly when both GENERAL_NAMEs contain an EDIPARTYNAME. A NULL pointer dereference and a crash may occur leading to a possible denial of service attack. OpenSSL itself uses the GENERAL_NAME_cmp function for two purposes: 1) Comparing CRL distribution point names between an available CRL and a CRL distribution point embedded in an X509 certificate 2) When verifying that a timestamp response token signer matches the timestamp authority name (exposed via the API functions TS_RESP_verify_response and TS_RESP_verify_token) If an attacker can control both items being compared then that attacker could trigger a crash. For example if the attacker can trick a client or server into checking a malicious certificate against a malicious CRL then this may occur. Note that some applications automatically download CRLs based on a URL embedded in a certificate. This checking happens prior to the signatures on the certificate and CRL being verified. OpenSSL's s_server, s_client and verify tools have support for the \"-crl_download\" option which implements automatic CRL downloading and this attack has been demonstrated to work against those tools. Note that an unrelated bug means that affected versions of OpenSSL cannot parse or construct correct encodings of EDIPARTYNAME. However it is possible to construct a malformed EDIPARTYNAME that OpenSSL's parser will accept and hence trigger this attack. All OpenSSL 1.1.1 and 1.0.2 versions are affected by this issue. Other OpenSSL releases are out of support and have not been checked. Fixed in OpenSSL 1.1.1i (Affected 1.1.1-1.1.1h). Fixed in OpenSSL 1.0.2x (Affected 1.0.2-1.0.2w).",
+                "markdown": "**Vulnerability CVE-2020-1971**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libssl1.1|1.1.1i-r0|[CVE-2020-1971](https://avd.aquasec.com/nvd/cve-2020-1971)|\n\nThe X.509 GeneralName type is a generic type for representing different types of names. One of those name types is known as EDIPartyName. OpenSSL provides a function GENERAL_NAME_cmp which compares different instances of a GENERAL_NAME to see if they are equal or not. This function behaves incorrectly when both GENERAL_NAMEs contain an EDIPARTYNAME. A NULL pointer dereference and a crash may occur leading to a possible denial of service attack. OpenSSL itself uses the GENERAL_NAME_cmp function for two purposes: 1) Comparing CRL distribution point names between an available CRL and a CRL distribution point embedded in an X509 certificate 2) When verifying that a timestamp response token signer matches the timestamp authority name (exposed via the API functions TS_RESP_verify_response and TS_RESP_verify_token) If an attacker can control both items being compared then that attacker could trigger a crash. For example if the attacker can trick a client or server into checking a malicious certificate against a malicious CRL then this may occur. Note that some applications automatically download CRLs based on a URL embedded in a certificate. This checking happens prior to the signatures on the certificate and CRL being verified. OpenSSL's s_server, s_client and verify tools have support for the \"-crl_download\" option which implements automatic CRL downloading and this attack has been demonstrated to work against those tools. Note that an unrelated bug means that affected versions of OpenSSL cannot parse or construct correct encodings of EDIPARTYNAME. However it is possible to construct a malformed EDIPARTYNAME that OpenSSL's parser will accept and hence trigger this attack. All OpenSSL 1.1.1 and 1.0.2 versions are affected by this issue. Other OpenSSL releases are out of support and have not been checked. Fixed in OpenSSL 1.1.1i (Affected 1.1.1-1.1.1h). Fixed in OpenSSL 1.0.2x (Affected 1.0.2-1.0.2w)."
+              },
+              "properties": {
+                "cvssv2_score": 4.3,
+                "cvssv2_vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                "cvssv3_baseScore": 5.9,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "5.9",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-23841",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "openssl: NULL pointer dereference in X509_issuer_and_serial_hash()"
+              },
+              "fullDescription": {
+                "text": "The OpenSSL public API function X509_issuer_and_serial_hash() attempts to create a unique hash value based on the issuer and serial number data contained within an X509 certificate. However it fails to correctly handle any errors that may occur while parsing the issuer field (which might occur if the issuer field is maliciously constructed). This may subsequently result in a NULL pointer deref and a crash leading to a potential denial of service attack. The function X509_issuer_and_serial_hash() is never directly called by OpenSSL itself so applications are only vulnerable if they use this function directly and they use it on certificates that may have been obtained from untrusted sources. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x)."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-23841",
+              "help": {
+                "text": "Vulnerability CVE-2021-23841\nSeverity: MEDIUM\nPackage: libssl1.1\nFixed Version: 1.1.1j-r0\nLink: [CVE-2021-23841](https://avd.aquasec.com/nvd/cve-2021-23841)\nThe OpenSSL public API function X509_issuer_and_serial_hash() attempts to create a unique hash value based on the issuer and serial number data contained within an X509 certificate. However it fails to correctly handle any errors that may occur while parsing the issuer field (which might occur if the issuer field is maliciously constructed). This may subsequently result in a NULL pointer deref and a crash leading to a potential denial of service attack. The function X509_issuer_and_serial_hash() is never directly called by OpenSSL itself so applications are only vulnerable if they use this function directly and they use it on certificates that may have been obtained from untrusted sources. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x).",
+                "markdown": "**Vulnerability CVE-2021-23841**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libssl1.1|1.1.1j-r0|[CVE-2021-23841](https://avd.aquasec.com/nvd/cve-2021-23841)|\n\nThe OpenSSL public API function X509_issuer_and_serial_hash() attempts to create a unique hash value based on the issuer and serial number data contained within an X509 certificate. However it fails to correctly handle any errors that may occur while parsing the issuer field (which might occur if the issuer field is maliciously constructed). This may subsequently result in a NULL pointer deref and a crash leading to a potential denial of service attack. The function X509_issuer_and_serial_hash() is never directly called by OpenSSL itself so applications are only vulnerable if they use this function directly and they use it on certificates that may have been obtained from untrusted sources. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x)."
+              },
+              "properties": {
+                "cvssv2_score": 4.3,
+                "cvssv2_vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                "cvssv3_baseScore": 5.9,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "5.9",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-3449",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "openssl: NULL pointer dereference in signature_algorithms processing"
+              },
+              "fullDescription": {
+                "text": "An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation ClientHello message from a client. If a TLSv1.2 renegotiation ClientHello omits the signature_algorithms extension (where it was present in the initial ClientHello), but includes a signature_algorithms_cert extension then a NULL pointer dereference will result, leading to a crash and a denial of service attack. A server is only vulnerable if it has TLSv1.2 and renegotiation enabled (which is the default configuration). OpenSSL TLS clients are not impacted by this issue. All OpenSSL 1.1.1 versions are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1-1.1.1j)."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-3449",
+              "help": {
+                "text": "Vulnerability CVE-2021-3449\nSeverity: MEDIUM\nPackage: libssl1.1\nFixed Version: 1.1.1k-r0\nLink: [CVE-2021-3449](https://avd.aquasec.com/nvd/cve-2021-3449)\nAn OpenSSL TLS server may crash if sent a maliciously crafted renegotiation ClientHello message from a client. If a TLSv1.2 renegotiation ClientHello omits the signature_algorithms extension (where it was present in the initial ClientHello), but includes a signature_algorithms_cert extension then a NULL pointer dereference will result, leading to a crash and a denial of service attack. A server is only vulnerable if it has TLSv1.2 and renegotiation enabled (which is the default configuration). OpenSSL TLS clients are not impacted by this issue. All OpenSSL 1.1.1 versions are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1-1.1.1j).",
+                "markdown": "**Vulnerability CVE-2021-3449**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libssl1.1|1.1.1k-r0|[CVE-2021-3449](https://avd.aquasec.com/nvd/cve-2021-3449)|\n\nAn OpenSSL TLS server may crash if sent a maliciously crafted renegotiation ClientHello message from a client. If a TLSv1.2 renegotiation ClientHello omits the signature_algorithms extension (where it was present in the initial ClientHello), but includes a signature_algorithms_cert extension then a NULL pointer dereference will result, leading to a crash and a denial of service attack. A server is only vulnerable if it has TLSv1.2 and renegotiation enabled (which is the default configuration). OpenSSL TLS clients are not impacted by this issue. All OpenSSL 1.1.1 versions are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1-1.1.1j)."
+              },
+              "properties": {
+                "cvssv2_score": 4.3,
+                "cvssv2_vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                "cvssv3_baseScore": 5.9,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "5.9",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-1563",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "openssl: information disclosure in PKCS7_dataDecode and CMS_decrypt_set1_pkey"
+              },
+              "fullDescription": {
+                "text": "In situations where an attacker receives automated notification of the success or failure of a decryption attempt an attacker, after sending a very large number of messages to be decrypted, can recover a CMS/PKCS7 transported encryption key or decrypt any RSA encrypted message that was encrypted with the public RSA key, using a Bleichenbacher padding oracle attack. Applications are not affected if they use a certificate together with the private RSA key to the CMS_decrypt or PKCS7_decrypt functions to select the correct recipient info to decrypt. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s)."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-1563",
+              "help": {
+                "text": "Vulnerability CVE-2019-1563\nSeverity: LOW\nPackage: libssl1.1\nFixed Version: 1.1.1d-r0\nLink: [CVE-2019-1563](https://avd.aquasec.com/nvd/cve-2019-1563)\nIn situations where an attacker receives automated notification of the success or failure of a decryption attempt an attacker, after sending a very large number of messages to be decrypted, can recover a CMS/PKCS7 transported encryption key or decrypt any RSA encrypted message that was encrypted with the public RSA key, using a Bleichenbacher padding oracle attack. Applications are not affected if they use a certificate together with the private RSA key to the CMS_decrypt or PKCS7_decrypt functions to select the correct recipient info to decrypt. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s).",
+                "markdown": "**Vulnerability CVE-2019-1563**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|libssl1.1|1.1.1d-r0|[CVE-2019-1563](https://avd.aquasec.com/nvd/cve-2019-1563)|\n\nIn situations where an attacker receives automated notification of the success or failure of a decryption attempt an attacker, after sending a very large number of messages to be decrypted, can recover a CMS/PKCS7 transported encryption key or decrypt any RSA encrypted message that was encrypted with the public RSA key, using a Bleichenbacher padding oracle attack. Applications are not affected if they use a certificate together with the private RSA key to the CMS_decrypt or PKCS7_decrypt functions to select the correct recipient info to decrypt. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s)."
+              },
+              "properties": {
+                "cvssv2_score": 4.3,
+                "cvssv2_vector": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+                "cvssv3_baseScore": 3.7,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "precision": "very-high",
+                "security-severity": "3.7",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-23839",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "openssl: incorrect SSLv2 rollback protection"
+              },
+              "fullDescription": {
+                "text": "OpenSSL 1.0.2 supports SSLv2. If a client attempts to negotiate SSLv2 with a server that is configured to support both SSLv2 and more recent SSL and TLS versions then a check is made for a version rollback attack when unpadding an RSA signature. Clients that support SSL or TLS versions greater than SSLv2 are supposed to use a special form of padding. A server that supports greater than SSLv2 is supposed to reject connection attempts from a client where this special form of padding is present, because this indicates that a version rollback has occurred (i.e. both client and server support greater than SSLv2, and yet this is the version that is being requested). The implementation of this padding check inverted the logic so that the connection attempt is accepted if the padding is present, and rejected if it is absent. This means that such as server will accept a connection if a version rollback attack has occurred. Further the server will erroneously reject a connection if a normal SSLv2 connection attempt is made. Only OpenSSL 1.0.2 servers from version 1.0.2s to 1.0.2x are affected by this issue. In order to be vulnerable a 1.0.2 server must: 1) have configured SSLv2 support at compile time (this is off by default), 2) have configured SSLv2 support at runtime (this is off by default), 3) have configured SSLv2 ciphersuites (these are not in the default ciphersuite list) OpenSSL 1.1.1 does not have SSLv2 support and therefore is not vulnerable to this issue. The underlying error is in the implementation of the RSA_padding_check_SSLv23() function. This also affects the RSA_SSLV23_PADDING padding mode used by various other functions. Although 1.1.1 does not support SSLv2 the RSA_padding_check_SSLv23() function still exists, as does the RSA_SSLV23_PADDING padding mode. Applications that directly call that function or use that padding mode will encounter this issue. However since there is no support for the SSLv2 protocol in 1.1.1 this is considered a bug and not a security issue in that version. OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.0.2y (Affected 1.0.2s-1.0.2x)."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-23839",
+              "help": {
+                "text": "Vulnerability CVE-2021-23839\nSeverity: LOW\nPackage: libssl1.1\nFixed Version: 1.1.1j-r0\nLink: [CVE-2021-23839](https://avd.aquasec.com/nvd/cve-2021-23839)\nOpenSSL 1.0.2 supports SSLv2. If a client attempts to negotiate SSLv2 with a server that is configured to support both SSLv2 and more recent SSL and TLS versions then a check is made for a version rollback attack when unpadding an RSA signature. Clients that support SSL or TLS versions greater than SSLv2 are supposed to use a special form of padding. A server that supports greater than SSLv2 is supposed to reject connection attempts from a client where this special form of padding is present, because this indicates that a version rollback has occurred (i.e. both client and server support greater than SSLv2, and yet this is the version that is being requested). The implementation of this padding check inverted the logic so that the connection attempt is accepted if the padding is present, and rejected if it is absent. This means that such as server will accept a connection if a version rollback attack has occurred. Further the server will erroneously reject a connection if a normal SSLv2 connection attempt is made. Only OpenSSL 1.0.2 servers from version 1.0.2s to 1.0.2x are affected by this issue. In order to be vulnerable a 1.0.2 server must: 1) have configured SSLv2 support at compile time (this is off by default), 2) have configured SSLv2 support at runtime (this is off by default), 3) have configured SSLv2 ciphersuites (these are not in the default ciphersuite list) OpenSSL 1.1.1 does not have SSLv2 support and therefore is not vulnerable to this issue. The underlying error is in the implementation of the RSA_padding_check_SSLv23() function. This also affects the RSA_SSLV23_PADDING padding mode used by various other functions. Although 1.1.1 does not support SSLv2 the RSA_padding_check_SSLv23() function still exists, as does the RSA_SSLV23_PADDING padding mode. Applications that directly call that function or use that padding mode will encounter this issue. However since there is no support for the SSLv2 protocol in 1.1.1 this is considered a bug and not a security issue in that version. OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.0.2y (Affected 1.0.2s-1.0.2x).",
+                "markdown": "**Vulnerability CVE-2021-23839**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|libssl1.1|1.1.1j-r0|[CVE-2021-23839](https://avd.aquasec.com/nvd/cve-2021-23839)|\n\nOpenSSL 1.0.2 supports SSLv2. If a client attempts to negotiate SSLv2 with a server that is configured to support both SSLv2 and more recent SSL and TLS versions then a check is made for a version rollback attack when unpadding an RSA signature. Clients that support SSL or TLS versions greater than SSLv2 are supposed to use a special form of padding. A server that supports greater than SSLv2 is supposed to reject connection attempts from a client where this special form of padding is present, because this indicates that a version rollback has occurred (i.e. both client and server support greater than SSLv2, and yet this is the version that is being requested). The implementation of this padding check inverted the logic so that the connection attempt is accepted if the padding is present, and rejected if it is absent. This means that such as server will accept a connection if a version rollback attack has occurred. Further the server will erroneously reject a connection if a normal SSLv2 connection attempt is made. Only OpenSSL 1.0.2 servers from version 1.0.2s to 1.0.2x are affected by this issue. In order to be vulnerable a 1.0.2 server must: 1) have configured SSLv2 support at compile time (this is off by default), 2) have configured SSLv2 support at runtime (this is off by default), 3) have configured SSLv2 ciphersuites (these are not in the default ciphersuite list) OpenSSL 1.1.1 does not have SSLv2 support and therefore is not vulnerable to this issue. The underlying error is in the implementation of the RSA_padding_check_SSLv23() function. This also affects the RSA_SSLV23_PADDING padding mode used by various other functions. Although 1.1.1 does not support SSLv2 the RSA_padding_check_SSLv23() function still exists, as does the RSA_SSLV23_PADDING padding mode. Applications that directly call that function or use that padding mode will encounter this issue. However since there is no support for the SSLv2 protocol in 1.1.1 this is considered a bug and not a security issue in that version. OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.0.2y (Affected 1.0.2s-1.0.2x)."
+              },
+              "properties": {
+                "cvssv2_score": 4.3,
+                "cvssv2_vector": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "cvssv3_baseScore": 3.7,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                "precision": "very-high",
+                "security-severity": "3.7",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-14697",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "musl libc through 1.1.23 has an x87 floating-point stack adjustment im ..."
+              },
+              "fullDescription": {
+                "text": "musl libc through 1.1.23 has an x87 floating-point stack adjustment imbalance, related to the math/i386/ directory. In some cases, use of this library could introduce out-of-bounds writes that are not present in an application's source code."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-14697",
+              "help": {
+                "text": "Vulnerability CVE-2019-14697\nSeverity: CRITICAL\nPackage: musl-utils\nFixed Version: 1.1.20-r5\nLink: [CVE-2019-14697](https://avd.aquasec.com/nvd/cve-2019-14697)\nmusl libc through 1.1.23 has an x87 floating-point stack adjustment imbalance, related to the math/i386/ directory. In some cases, use of this library could introduce out-of-bounds writes that are not present in an application's source code.",
+                "markdown": "**Vulnerability CVE-2019-14697**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|CRITICAL|musl-utils|1.1.20-r5|[CVE-2019-14697](https://avd.aquasec.com/nvd/cve-2019-14697)|\n\nmusl libc through 1.1.23 has an x87 floating-point stack adjustment imbalance, related to the math/i386/ directory. In some cases, use of this library could introduce out-of-bounds writes that are not present in an application's source code."
+              },
+              "properties": {
+                "cvssv2_score": 7.5,
+                "cvssv2_vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "cvssv3_baseScore": 9.8,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "precision": "very-high",
+                "security-severity": "9.8",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-28928",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ..."
+              },
+              "fullDescription": {
+                "text": "In musl libc through 1.2.1, wcsnrtombs mishandles particular combinations of destination buffer size and source character limit, as demonstrated by an invalid write access (buffer overflow)."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2020-28928",
+              "help": {
+                "text": "Vulnerability CVE-2020-28928\nSeverity: MEDIUM\nPackage: musl-utils\nFixed Version: 1.1.20-r6\nLink: [CVE-2020-28928](https://avd.aquasec.com/nvd/cve-2020-28928)\nIn musl libc through 1.2.1, wcsnrtombs mishandles particular combinations of destination buffer size and source character limit, as demonstrated by an invalid write access (buffer overflow).",
+                "markdown": "**Vulnerability CVE-2020-28928**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|musl-utils|1.1.20-r6|[CVE-2020-28928](https://avd.aquasec.com/nvd/cve-2020-28928)|\n\nIn musl libc through 1.2.1, wcsnrtombs mishandles particular combinations of destination buffer size and source character limit, as demonstrated by an invalid write access (buffer overflow)."
+              },
+              "properties": {
+                "cvssv2_score": 2.1,
+                "cvssv2_vector": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+                "cvssv3_baseScore": 5.5,
+                "cvssv3_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-8457",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "sqlite: heap out-of-bound read in function rtreenode()"
+              },
+              "fullDescription": {
+                "text": "SQLite3 from 3.6.0 to and including 3.27.2 is vulnerable to heap out-of-bound read in the rtreenode() function when handling invalid rtree tables."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-8457",
+              "help": {
+                "text": "Vulnerability CVE-2019-8457\nSeverity: CRITICAL\nPackage: sqlite-libs\nFixed Version: 3.28.0-r0\nLink: [CVE-2019-8457](https://avd.aquasec.com/nvd/cve-2019-8457)\nSQLite3 from 3.6.0 to and including 3.27.2 is vulnerable to heap out-of-bound read in the rtreenode() function when handling invalid rtree tables.",
+                "markdown": "**Vulnerability CVE-2019-8457**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|CRITICAL|sqlite-libs|3.28.0-r0|[CVE-2019-8457](https://avd.aquasec.com/nvd/cve-2019-8457)|\n\nSQLite3 from 3.6.0 to and including 3.27.2 is vulnerable to heap out-of-bound read in the rtreenode() function when handling invalid rtree tables."
+              },
+              "properties": {
+                "cvssv2_score": 7.5,
+                "cvssv2_vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "cvssv3_baseScore": 9.8,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "precision": "very-high",
+                "security-severity": "9.8",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-19244",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage"
+              },
+              "fullDescription": {
+                "text": "sqlite3Select in select.c in SQLite 3.30.1 allows a crash if a sub-select uses both DISTINCT and window functions, and also has certain ORDER BY usage."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-19244",
+              "help": {
+                "text": "Vulnerability CVE-2019-19244\nSeverity: HIGH\nPackage: sqlite-libs\nFixed Version: 3.28.0-r2\nLink: [CVE-2019-19244](https://avd.aquasec.com/nvd/cve-2019-19244)\nsqlite3Select in select.c in SQLite 3.30.1 allows a crash if a sub-select uses both DISTINCT and window functions, and also has certain ORDER BY usage.",
+                "markdown": "**Vulnerability CVE-2019-19244**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|sqlite-libs|3.28.0-r2|[CVE-2019-19244](https://avd.aquasec.com/nvd/cve-2019-19244)|\n\nsqlite3Select in select.c in SQLite 3.30.1 allows a crash if a sub-select uses both DISTINCT and window functions, and also has certain ORDER BY usage."
+              },
+              "properties": {
+                "cvssv2_score": 5,
+                "cvssv2_vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-5018",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "sqlite: Use-after-free in window function leading to remote code execution"
+              },
+              "fullDescription": {
+                "text": "An exploitable use after free vulnerability exists in the window function functionality of Sqlite3 3.26.0. A specially crafted SQL command can cause a use after free vulnerability, potentially resulting in remote code execution. An attacker can send a malicious SQL command to trigger this vulnerability."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-5018",
+              "help": {
+                "text": "Vulnerability CVE-2019-5018\nSeverity: HIGH\nPackage: sqlite-libs\nFixed Version: 3.28.0-r0\nLink: [CVE-2019-5018](https://avd.aquasec.com/nvd/cve-2019-5018)\nAn exploitable use after free vulnerability exists in the window function functionality of Sqlite3 3.26.0. A specially crafted SQL command can cause a use after free vulnerability, potentially resulting in remote code execution. An attacker can send a malicious SQL command to trigger this vulnerability.",
+                "markdown": "**Vulnerability CVE-2019-5018**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|sqlite-libs|3.28.0-r0|[CVE-2019-5018](https://avd.aquasec.com/nvd/cve-2019-5018)|\n\nAn exploitable use after free vulnerability exists in the window function functionality of Sqlite3 3.26.0. A specially crafted SQL command can cause a use after free vulnerability, potentially resulting in remote code execution. An attacker can send a malicious SQL command to trigger this vulnerability."
+              },
+              "properties": {
+                "cvssv2_score": 6.8,
+                "cvssv2_vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "cvssv3_baseScore": 8.1,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "precision": "very-high",
+                "security-severity": "8.1",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-11655",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "sqlite: malformed window-function query leads to DoS"
+              },
+              "fullDescription": {
+                "text": "SQLite through 3.31.1 allows attackers to cause a denial of service (segmentation fault) via a malformed window-function query because the AggInfo object's initialization is mishandled."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2020-11655",
+              "help": {
+                "text": "Vulnerability CVE-2020-11655\nSeverity: HIGH\nPackage: sqlite-libs\nFixed Version: 3.28.0-r3\nLink: [CVE-2020-11655](https://avd.aquasec.com/nvd/cve-2020-11655)\nSQLite through 3.31.1 allows attackers to cause a denial of service (segmentation fault) via a malformed window-function query because the AggInfo object's initialization is mishandled.",
+                "markdown": "**Vulnerability CVE-2020-11655**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|sqlite-libs|3.28.0-r3|[CVE-2020-11655](https://avd.aquasec.com/nvd/cve-2020-11655)|\n\nSQLite through 3.31.1 allows attackers to cause a denial of service (segmentation fault) via a malformed window-function query because the AggInfo object's initialization is mishandled."
+              },
+              "properties": {
+                "cvssv2_score": 5,
+                "cvssv2_vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-16168",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "sqlite: Division by zero in whereLoopAddBtreeIndex in sqlite3.c"
+              },
+              "fullDescription": {
+                "text": "In SQLite through 3.29.0, whereLoopAddBtreeIndex in sqlite3.c can crash a browser or other application because of missing validation of a sqlite_stat1 sz field, aka a \"severe division by zero in the query planner.\""
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-16168",
+              "help": {
+                "text": "Vulnerability CVE-2019-16168\nSeverity: MEDIUM\nPackage: sqlite-libs\nFixed Version: 3.28.0-r1\nLink: [CVE-2019-16168](https://avd.aquasec.com/nvd/cve-2019-16168)\nIn SQLite through 3.29.0, whereLoopAddBtreeIndex in sqlite3.c can crash a browser or other application because of missing validation of a sqlite_stat1 sz field, aka a \"severe division by zero in the query planner.\"",
+                "markdown": "**Vulnerability CVE-2019-16168**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|sqlite-libs|3.28.0-r1|[CVE-2019-16168](https://avd.aquasec.com/nvd/cve-2019-16168)|\n\nIn SQLite through 3.29.0, whereLoopAddBtreeIndex in sqlite3.c can crash a browser or other application because of missing validation of a sqlite_stat1 sz field, aka a \"severe division by zero in the query planner.\""
+              },
+              "properties": {
+                "cvssv2_score": 4.3,
+                "cvssv2_vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                "cvssv3_baseScore": 6.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "6.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-19242",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "sqlite: SQL injection in sqlite3ExprCodeTarget in expr.c"
+              },
+              "fullDescription": {
+                "text": "SQLite 3.30.1 mishandles pExpr-\u003ey.pTab, as demonstrated by the TK_COLUMN case in sqlite3ExprCodeTarget in expr.c."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-19242",
+              "help": {
+                "text": "Vulnerability CVE-2019-19242\nSeverity: MEDIUM\nPackage: sqlite-libs\nFixed Version: 3.28.0-r2\nLink: [CVE-2019-19242](https://avd.aquasec.com/nvd/cve-2019-19242)\nSQLite 3.30.1 mishandles pExpr-\u003ey.pTab, as demonstrated by the TK_COLUMN case in sqlite3ExprCodeTarget in expr.c.",
+                "markdown": "**Vulnerability CVE-2019-19242**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|sqlite-libs|3.28.0-r2|[CVE-2019-19242](https://avd.aquasec.com/nvd/cve-2019-19242)|\n\nSQLite 3.30.1 mishandles pExpr-\u003ey.pTab, as demonstrated by the TK_COLUMN case in sqlite3ExprCodeTarget in expr.c."
+              },
+              "properties": {
+                "cvssv2_score": 4.3,
+                "cvssv2_vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                "cvssv3_baseScore": 5.9,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "5.9",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-20916",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "python-pip: directory traversal in _download_http_url() function in src/pip/_internal/download.py"
+              },
+              "fullDescription": {
+                "text": "The pip package before 19.2 for Python allows Directory Traversal when a URL is given in an install command, because a Content-Disposition header can have ../ in a filename, as demonstrated by overwriting the /root/.ssh/authorized_keys file. This occurs in _download_http_url in _internal/download.py."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2019-20916",
+              "help": {
+                "text": "Vulnerability CVE-2019-20916\nSeverity: HIGH\nPackage: pip\nFixed Version: 19.2\nLink: [CVE-2019-20916](https://avd.aquasec.com/nvd/cve-2019-20916)\nThe pip package before 19.2 for Python allows Directory Traversal when a URL is given in an install command, because a Content-Disposition header can have ../ in a filename, as demonstrated by overwriting the /root/.ssh/authorized_keys file. This occurs in _download_http_url in _internal/download.py.",
+                "markdown": "**Vulnerability CVE-2019-20916**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|pip|19.2|[CVE-2019-20916](https://avd.aquasec.com/nvd/cve-2019-20916)|\n\nThe pip package before 19.2 for Python allows Directory Traversal when a URL is given in an install command, because a Content-Disposition header can have ../ in a filename, as demonstrated by overwriting the /root/.ssh/authorized_keys file. This occurs in _download_http_url in _internal/download.py."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                "cvssv40_baseScore": 8.7,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-3572",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "python-pip: Incorrect handling of unicode separators in git references"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in python-pip in the way it handled Unicode separators in git references. A remote attacker could possibly use this issue to install a different revision on a repository. The highest threat from this vulnerability is to data integrity. This is fixed in python-pip version 21.1."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-3572",
+              "help": {
+                "text": "Vulnerability CVE-2021-3572\nSeverity: HIGH\nPackage: pip\nFixed Version: 21.1\nLink: [CVE-2021-3572](https://avd.aquasec.com/nvd/cve-2021-3572)\nA flaw was found in python-pip in the way it handled Unicode separators in git references. A remote attacker could possibly use this issue to install a different revision on a repository. The highest threat from this vulnerability is to data integrity. This is fixed in python-pip version 21.1.",
+                "markdown": "**Vulnerability CVE-2021-3572**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|pip|21.1|[CVE-2021-3572](https://avd.aquasec.com/nvd/cve-2021-3572)|\n\nA flaw was found in python-pip in the way it handled Unicode separators in git references. A remote attacker could possibly use this issue to install a different revision on a repository. The highest threat from this vulnerability is to data integrity. This is fixed in python-pip version 21.1."
+              },
+              "properties": {
+                "cvssv3_baseScore": 5.7,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:N",
+                "cvssv40_baseScore": 7.1,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "5.7",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-5752",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "pip: Mercurial configuration injectable in repo revision when installing via pip"
+              },
+              "fullDescription": {
+                "text": "When installing a package from a Mercurial VCS URL  (ie \"pip install \nhg+...\") with pip prior to v23.3, the specified Mercurial revision could\n be used to inject arbitrary configuration options to the \"hg clone\" \ncall (ie \"--config\"). Controlling the Mercurial configuration can modify\n how and which repository is installed. This vulnerability does not \naffect users who aren't installing from Mercurial."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-5752",
+              "help": {
+                "text": "Vulnerability CVE-2023-5752\nSeverity: MEDIUM\nPackage: pip\nFixed Version: 23.3\nLink: [CVE-2023-5752](https://avd.aquasec.com/nvd/cve-2023-5752)\nWhen installing a package from a Mercurial VCS URL  (ie \"pip install \nhg+...\") with pip prior to v23.3, the specified Mercurial revision could\n be used to inject arbitrary configuration options to the \"hg clone\" \ncall (ie \"--config\"). Controlling the Mercurial configuration can modify\n how and which repository is installed. This vulnerability does not \naffect users who aren't installing from Mercurial.",
+                "markdown": "**Vulnerability CVE-2023-5752**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|pip|23.3|[CVE-2023-5752](https://avd.aquasec.com/nvd/cve-2023-5752)|\n\nWhen installing a package from a Mercurial VCS URL  (ie \"pip install \nhg+...\") with pip prior to v23.3, the specified Mercurial revision could\n be used to inject arbitrary configuration options to the \"hg clone\" \ncall (ie \"--config\"). Controlling the Mercurial configuration can modify\n how and which repository is installed. This vulnerability does not \naffect users who aren't installing from Mercurial."
+              },
+              "properties": {
+                "cvssv3_baseScore": 5.5,
+                "cvssv3_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+                "cvssv40_baseScore": 6.8,
+                "cvssv40_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-8869",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "pip: pip missing checks on symbolic link extraction"
+              },
+              "fullDescription": {
+                "text": "When extracting a tar archive pip may not check symbolic links point into the extraction directory if the tarfile module doesn't implement PEP 706.\nNote that upgrading pip to a \"fixed\" version for this vulnerability doesn't fix all known vulnerabilities that are remediated by using a Python version that implements PEP 706.\n\nNote that this is a vulnerability in pip's fallback implementation of tar extraction for Python versions that don't implement PEP 706\nand therefore are not secure to all vulnerabilities in the Python 'tarfile' module. If you're using a Python version that implements PEP 706\nthen pip doesn't use the \"vulnerable\" fallback code.\n\nMitigations include upgrading to a version of pip that includes the fix, upgrading to a Python version that implements PEP 706 (Python \u003e=3.9.17, \u003e=3.10.12, \u003e=3.11.4, or \u003e=3.12),\napplying the linked patch, or inspecting source distributions (sdists) before installation as is already a best-practice."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-8869",
+              "help": {
+                "text": "Vulnerability CVE-2025-8869\nSeverity: MEDIUM\nPackage: pip\nFixed Version: 25.3\nLink: [CVE-2025-8869](https://avd.aquasec.com/nvd/cve-2025-8869)\nWhen extracting a tar archive pip may not check symbolic links point into the extraction directory if the tarfile module doesn't implement PEP 706.\nNote that upgrading pip to a \"fixed\" version for this vulnerability doesn't fix all known vulnerabilities that are remediated by using a Python version that implements PEP 706.\n\nNote that this is a vulnerability in pip's fallback implementation of tar extraction for Python versions that don't implement PEP 706\nand therefore are not secure to all vulnerabilities in the Python 'tarfile' module. If you're using a Python version that implements PEP 706\nthen pip doesn't use the \"vulnerable\" fallback code.\n\nMitigations include upgrading to a version of pip that includes the fix, upgrading to a Python version that implements PEP 706 (Python \u003e=3.9.17, \u003e=3.10.12, \u003e=3.11.4, or \u003e=3.12),\napplying the linked patch, or inspecting source distributions (sdists) before installation as is already a best-practice.",
+                "markdown": "**Vulnerability CVE-2025-8869**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|pip|25.3|[CVE-2025-8869](https://avd.aquasec.com/nvd/cve-2025-8869)|\n\nWhen extracting a tar archive pip may not check symbolic links point into the extraction directory if the tarfile module doesn't implement PEP 706.\nNote that upgrading pip to a \"fixed\" version for this vulnerability doesn't fix all known vulnerabilities that are remediated by using a Python version that implements PEP 706.\n\nNote that this is a vulnerability in pip's fallback implementation of tar extraction for Python versions that don't implement PEP 706\nand therefore are not secure to all vulnerabilities in the Python 'tarfile' module. If you're using a Python version that implements PEP 706\nthen pip doesn't use the \"vulnerable\" fallback code.\n\nMitigations include upgrading to a version of pip that includes the fix, upgrading to a Python version that implements PEP 706 (Python \u003e=3.9.17, \u003e=3.10.12, \u003e=3.11.4, or \u003e=3.12),\napplying the linked patch, or inspecting source distributions (sdists) before installation as is already a best-practice."
+              },
+              "properties": {
+                "cvssv40_baseScore": 5.9,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-13346",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "pip: pip: Arbitrary file installation via malicious package indexes"
+              },
+              "fullDescription": {
+                "text": "pip would incorrectly handle doubly-encoded package URLs from indexes allowing for files to be installed to arbitrary locations on disk even when installing wheels.\n\n\n\n\nThis vulnerability requires downloading or installing a package from a malicious package index to succeed, malicious packages alone are not able to exploit this vulnerability. Note that this vulnerability only materially impacts users running `pip download` with the `--only-binary` option as installing source distributions from an untrusted index is already an unsafe operation that executes code during install time."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-13346",
+              "help": {
+                "text": "Vulnerability CVE-2026-13346\nSeverity: MEDIUM\nPackage: pip\nFixed Version: 26.2.0\nLink: [CVE-2026-13346](https://avd.aquasec.com/nvd/cve-2026-13346)\npip would incorrectly handle doubly-encoded package URLs from indexes allowing for files to be installed to arbitrary locations on disk even when installing wheels.\n\n\n\n\nThis vulnerability requires downloading or installing a package from a malicious package index to succeed, malicious packages alone are not able to exploit this vulnerability. Note that this vulnerability only materially impacts users running `pip download` with the `--only-binary` option as installing source distributions from an untrusted index is already an unsafe operation that executes code during install time.",
+                "markdown": "**Vulnerability CVE-2026-13346**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|pip|26.2.0|[CVE-2026-13346](https://avd.aquasec.com/nvd/cve-2026-13346)|\n\npip would incorrectly handle doubly-encoded package URLs from indexes allowing for files to be installed to arbitrary locations on disk even when installing wheels.\n\n\n\n\nThis vulnerability requires downloading or installing a package from a malicious package index to succeed, malicious packages alone are not able to exploit this vulnerability. Note that this vulnerability only materially impacts users running `pip download` with the `--only-binary` option as installing source distributions from an untrusted index is already an unsafe operation that executes code during install time."
+              },
+              "properties": {
+                "cvssv40_baseScore": 5.6,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:A/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-3219",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "pip: pip: Incorrect file installation due to improper archive handling"
+              },
+              "fullDescription": {
+                "text": "pip handles concatenated tar and ZIP files as ZIP files regardless of filename or whether a file is both a tar and ZIP file. This behavior could result in confusing installation behavior, such as installing \"incorrect\" files according to the filename of the archive. New behavior only proceeds with installation if the file identifies uniquely as a ZIP or tar archive, not as both."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-3219",
+              "help": {
+                "text": "Vulnerability CVE-2026-3219\nSeverity: MEDIUM\nPackage: pip\nFixed Version: 26.1\nLink: [CVE-2026-3219](https://avd.aquasec.com/nvd/cve-2026-3219)\npip handles concatenated tar and ZIP files as ZIP files regardless of filename or whether a file is both a tar and ZIP file. This behavior could result in confusing installation behavior, such as installing \"incorrect\" files according to the filename of the archive. New behavior only proceeds with installation if the file identifies uniquely as a ZIP or tar archive, not as both.",
+                "markdown": "**Vulnerability CVE-2026-3219**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|pip|26.1|[CVE-2026-3219](https://avd.aquasec.com/nvd/cve-2026-3219)|\n\npip handles concatenated tar and ZIP files as ZIP files regardless of filename or whether a file is both a tar and ZIP file. This behavior could result in confusing installation behavior, such as installing \"incorrect\" files according to the filename of the archive. New behavior only proceeds with installation if the file identifies uniquely as a ZIP or tar archive, not as both."
+              },
+              "properties": {
+                "cvssv40_baseScore": 4.6,
+                "cvssv40_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-6357",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "pip: pip: Arbitrary code execution or information disclosure via malicious wheel package installation"
+              },
+              "fullDescription": {
+                "text": "pip prior to version 26.1 would run self-update check functionality after installing wheel files which required importing well-known Python modules names. These module imports were intentionally deferred to increase startup time of the pip CLI. The patch changes self-update functionality to run before wheels are installed to prevent newly-installed modules from being imported shortly after the installation of a wheel package. Users should still review package contents prior to installation."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-6357",
+              "help": {
+                "text": "Vulnerability CVE-2026-6357\nSeverity: MEDIUM\nPackage: pip\nFixed Version: 26.1\nLink: [CVE-2026-6357](https://avd.aquasec.com/nvd/cve-2026-6357)\npip prior to version 26.1 would run self-update check functionality after installing wheel files which required importing well-known Python modules names. These module imports were intentionally deferred to increase startup time of the pip CLI. The patch changes self-update functionality to run before wheels are installed to prevent newly-installed modules from being imported shortly after the installation of a wheel package. Users should still review package contents prior to installation.",
+                "markdown": "**Vulnerability CVE-2026-6357**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|pip|26.1|[CVE-2026-6357](https://avd.aquasec.com/nvd/cve-2026-6357)|\n\npip prior to version 26.1 would run self-update check functionality after installing wheel files which required importing well-known Python modules names. These module imports were intentionally deferred to increase startup time of the pip CLI. The patch changes self-update functionality to run before wheels are installed to prevent newly-installed modules from being imported shortly after the installation of a wheel package. Users should still review package contents prior to installation."
+              },
+              "properties": {
+                "cvssv40_baseScore": 5.3,
+                "cvssv40_vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-8643",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "python-pip: Path traversal via malicious entry point name in pip wheel installation allows arbitrary file overwrite"
+              },
+              "fullDescription": {
+                "text": "pip would treat console_scripts and gui_scripts as paths instead of file names without sanitizing the resolved absolute path to the installation directory, leading to entry points being installed outside the installation directory."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-8643",
+              "help": {
+                "text": "Vulnerability CVE-2026-8643\nSeverity: MEDIUM\nPackage: pip\nFixed Version: 26.1.2\nLink: [CVE-2026-8643](https://avd.aquasec.com/nvd/cve-2026-8643)\npip would treat console_scripts and gui_scripts as paths instead of file names without sanitizing the resolved absolute path to the installation directory, leading to entry points being installed outside the installation directory.",
+                "markdown": "**Vulnerability CVE-2026-8643**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|pip|26.1.2|[CVE-2026-8643](https://avd.aquasec.com/nvd/cve-2026-8643)|\n\npip would treat console_scripts and gui_scripts as paths instead of file names without sanitizing the resolved absolute path to the installation directory, leading to entry points being installed outside the installation directory."
+              },
+              "properties": {
+                "cvssv3_baseScore": 8,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+                "cvssv40_baseScore": 4.1,
+                "cvssv40_vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:A/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "8.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-1703",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "pip: pip: Information disclosure via path traversal when installing crafted wheel archives"
+              },
+              "fullDescription": {
+                "text": "When pip is installing and extracting a maliciously crafted wheel archive, files may be extracted outside the installation directory. The path traversal is limited to prefixes of the installation directory, thus isn't able to inject or overwrite executable files in typical situations."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-1703",
+              "help": {
+                "text": "Vulnerability CVE-2026-1703\nSeverity: LOW\nPackage: pip\nFixed Version: 26.0\nLink: [CVE-2026-1703](https://avd.aquasec.com/nvd/cve-2026-1703)\nWhen pip is installing and extracting a maliciously crafted wheel archive, files may be extracted outside the installation directory. The path traversal is limited to prefixes of the installation directory, thus isn't able to inject or overwrite executable files in typical situations.",
+                "markdown": "**Vulnerability CVE-2026-1703**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|pip|26.0|[CVE-2026-1703](https://avd.aquasec.com/nvd/cve-2026-1703)|\n\nWhen pip is installing and extracting a maliciously crafted wheel archive, files may be extracted outside the installation directory. The path traversal is limited to prefixes of the installation directory, thus isn't able to inject or overwrite executable files in typical situations."
+              },
+              "properties": {
+                "cvssv40_baseScore": 2,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "2.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-40897",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py"
+              },
+              "fullDescription": {
+                "text": "Python Packaging Authority (PyPA) setuptools before 65.5.1 allows remote attackers to cause a denial of service via HTML in a crafted package or custom PackageIndex page. There is a Regular Expression Denial of Service (ReDoS) in package_index.py."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-40897",
+              "help": {
+                "text": "Vulnerability CVE-2022-40897\nSeverity: HIGH\nPackage: setuptools\nFixed Version: 65.5.1\nLink: [CVE-2022-40897](https://avd.aquasec.com/nvd/cve-2022-40897)\nPython Packaging Authority (PyPA) setuptools before 65.5.1 allows remote attackers to cause a denial of service via HTML in a crafted package or custom PackageIndex page. There is a Regular Expression Denial of Service (ReDoS) in package_index.py.",
+                "markdown": "**Vulnerability CVE-2022-40897**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|setuptools|65.5.1|[CVE-2022-40897](https://avd.aquasec.com/nvd/cve-2022-40897)|\n\nPython Packaging Authority (PyPA) setuptools before 65.5.1 allows remote attackers to cause a denial of service via HTML in a crafted package or custom PackageIndex page. There is a Regular Expression Denial of Service (ReDoS) in package_index.py."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "cvssv40_baseScore": 8.7,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:L/SI:L/SA:N",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-6345",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools"
+              },
+              "fullDescription": {
+                "text": "A vulnerability in the package_index module of pypa/setuptools versions up to 69.1.1 allows for remote code execution via its download functions. These functions, which are used to download packages from URLs provided by users or retrieved from package index servers, are susceptible to code injection. If these functions are exposed to user-controlled inputs, such as package URLs, they can execute arbitrary commands on the system. The issue is fixed in version 70.0."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-6345",
+              "help": {
+                "text": "Vulnerability CVE-2024-6345\nSeverity: HIGH\nPackage: setuptools\nFixed Version: 70.0.0\nLink: [CVE-2024-6345](https://avd.aquasec.com/nvd/cve-2024-6345)\nA vulnerability in the package_index module of pypa/setuptools versions up to 69.1.1 allows for remote code execution via its download functions. These functions, which are used to download packages from URLs provided by users or retrieved from package index servers, are susceptible to code injection. If these functions are exposed to user-controlled inputs, such as package URLs, they can execute arbitrary commands on the system. The issue is fixed in version 70.0.",
+                "markdown": "**Vulnerability CVE-2024-6345**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|setuptools|70.0.0|[CVE-2024-6345](https://avd.aquasec.com/nvd/cve-2024-6345)|\n\nA vulnerability in the package_index module of pypa/setuptools versions up to 69.1.1 allows for remote code execution via its download functions. These functions, which are used to download packages from URLs provided by users or retrieved from package index servers, are susceptible to code injection. If these functions are exposed to user-controlled inputs, such as package URLs, they can execute arbitrary commands on the system. The issue is fixed in version 70.0."
+              },
+              "properties": {
+                "cvssv3_baseScore": 8.8,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "cvssv40_baseScore": 7.5,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "8.8",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-47273",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "setuptools: Path Traversal Vulnerability in setuptools PackageIndex"
+              },
+              "fullDescription": {
+                "text": "setuptools is a package that allows users to download, build, install, upgrade, and uninstall Python packages. A path traversal vulnerability in `PackageIndex` is present in setuptools prior to version 78.1.1. An attacker would be allowed to write files to arbitrary locations on the filesystem with the permissions of the process running the Python code, which could escalate to remote code execution depending on the context. Version 78.1.1 fixes the issue."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-47273",
+              "help": {
+                "text": "Vulnerability CVE-2025-47273\nSeverity: HIGH\nPackage: setuptools\nFixed Version: 78.1.1\nLink: [CVE-2025-47273](https://avd.aquasec.com/nvd/cve-2025-47273)\nsetuptools is a package that allows users to download, build, install, upgrade, and uninstall Python packages. A path traversal vulnerability in `PackageIndex` is present in setuptools prior to version 78.1.1. An attacker would be allowed to write files to arbitrary locations on the filesystem with the permissions of the process running the Python code, which could escalate to remote code execution depending on the context. Version 78.1.1 fixes the issue.",
+                "markdown": "**Vulnerability CVE-2025-47273**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|setuptools|78.1.1|[CVE-2025-47273](https://avd.aquasec.com/nvd/cve-2025-47273)|\n\nsetuptools is a package that allows users to download, build, install, upgrade, and uninstall Python packages. A path traversal vulnerability in `PackageIndex` is present in setuptools prior to version 78.1.1. An attacker would be allowed to write files to arbitrary locations on the filesystem with the permissions of the process running the Python code, which could escalate to remote code execution depending on the context. Version 78.1.1 fixes the issue."
+              },
+              "properties": {
+                "cvssv40_baseScore": 7.7,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P",
+                "precision": "very-high",
+                "security-severity": "8.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-59890",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "setuptools: setuptools: MANIFEST.in exclusion bypass in sdist via Unicode normalization collision (NFC/NFD)"
+              },
+              "fullDescription": {
+                "text": "setuptools is a package that allows users to download, build, install, upgrade, and uninstall Python packages. Prior to 83.0.0, FileList applied MANIFEST.in exclude, global-exclude, recursive-exclude, and prune directives by matching compiled glob patterns against on-disk file names without Unicode normalization, so on macOS APFS or HFS+ an NFD file name could bypass an NFC exclusion rule and be packed into a source distribution. This issue is fixed in version 83.0.0."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-59890",
+              "help": {
+                "text": "Vulnerability CVE-2026-59890\nSeverity: MEDIUM\nPackage: setuptools\nFixed Version: 83.0.0\nLink: [CVE-2026-59890](https://avd.aquasec.com/nvd/cve-2026-59890)\nsetuptools is a package that allows users to download, build, install, upgrade, and uninstall Python packages. Prior to 83.0.0, FileList applied MANIFEST.in exclude, global-exclude, recursive-exclude, and prune directives by matching compiled glob patterns against on-disk file names without Unicode normalization, so on macOS APFS or HFS+ an NFD file name could bypass an NFC exclusion rule and be packed into a source distribution. This issue is fixed in version 83.0.0.",
+                "markdown": "**Vulnerability CVE-2026-59890**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|setuptools|83.0.0|[CVE-2026-59890](https://avd.aquasec.com/nvd/cve-2026-59890)|\n\nsetuptools is a package that allows users to download, build, install, upgrade, and uninstall Python packages. Prior to 83.0.0, FileList applied MANIFEST.in exclude, global-exclude, recursive-exclude, and prune directives by matching compiled glob patterns against on-disk file names without Unicode normalization, so on macOS APFS or HFS+ an NFD file name could bypass an NFC exclusion rule and be packed into a source distribution. This issue is fixed in version 83.0.0."
+              },
+              "properties": {
+                "cvssv3_baseScore": 6.1,
+                "cvssv3_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+                "precision": "very-high",
+                "security-severity": "6.1",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "GHSA-xmj3-9gf7-h52w",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "setuptools: Windows path escape via namespace_packages.txt during legacy wheel installation  Description"
+              },
+              "fullDescription": {
+                "text": "### Summary\n\nOn Windows, attacker-controlled content in a wheel's\n`.dist-info/namespace_packages.txt` can cause setuptools' legacy wheel\ninstallation path to create an `__init__.py` outside the requested\n`destination_eggdir`.\n\nThe attacker can influence the destination path, but not the contents of\nthe created file.\n\n### Details\n\nTested setuptools commit:\n\n`6ead555c5fb29bc57fe6105b1bffc163f56fd558`\n\nRelevant source:\n\n`setuptools/wheel.py`\n\nSHA-256:\n\n`359b7e0d5dd8c3135653abe08a8ed5dc0352eadfd7df22cb5e2b5303b7c3cafd`\n\nThe relevant call path is:\n\n`Wheel(wheel_path).install_as_egg(destination)`\n→ `_install_as_egg`\n→ `_convert_metadata`\n→ `_fix_namespace_packages`\n\nA wheel can provide attacker-controlled content in:\n\n`\u003cdistribution\u003e.dist-info/namespace_packages.txt`\n\nThe namespace value is eventually used approximately as:\n\n```python\nmod_dir = os.path.join(destination_eggdir, *mod.split('.'))\nmod_init = os.path.join(mod_dir, '__init__.py')\n\nIf mod is a Windows drive-qualified absolute path containing no dots,\nmod.split('.') preserves it as a single component.\nOn Windows, os.path.join(destination_eggdir, absolute_component) discards\nthe original base directory and resolves to the attacker-supplied absolute\npath.\nThe existing wheel filename and ZIP traversal checks do not validate this\nmetadata value before it is subsequently interpreted as a filesystem path.\n\n```markdown\n### PoC\n\nThe reproduction was performed entirely inside a disposable temporary\ndirectory.\n\nLayout:\n\n```text\nsandbox/\n    destination/\n    outside/\n    input/\n    canary.txt\n```\n\nA synthetic wheel was created containing:\n\n`demo_pkg-1.0.dist-info/namespace_packages.txt`\n\nwhose content was the absolute path of:\n\n`sandbox\\outside`\n\nThe real acquired setuptools implementation was then invoked:\n\n```python\nsetuptools.wheel.Wheel(synthetic_wheel).install_as_egg(\n    sandbox_destination\n)\n```\n\nThe operation completed without exception.\n\nExpected metadata was created under:\n\n`sandbox\\destination\\EGG-INFO`\n\nbut setuptools also created:\n\n`sandbox\\outside\\__init__.py`\n\nThe file did not exist before execution.\n\nIts contents were:\n\n```python\n__import__('pkg_resources').declare_namespace(__name__)\n```\n\nThe unrelated canary remained byte-identical.\n\nThe sandbox was deleted after recording the evidence.\n```\n\n\n### Impact\n\nA crafted wheel can cause setuptools to create a fixed-content\n`__init__.py` outside the intended installation directory at a\nfilesystem path influenced by the wheel, with the permissions of the\nprocess performing the installation.\n\nThe demonstrated reproduction required the target parent directory to\nalready exist."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://github.com/advisories/GHSA-xmj3-9gf7-h52w",
+              "help": {
+                "text": "Vulnerability GHSA-xmj3-9gf7-h52w\nSeverity: LOW\nPackage: setuptools\nFixed Version: 84.1.0\nLink: [GHSA-xmj3-9gf7-h52w](https://github.com/advisories/GHSA-xmj3-9gf7-h52w)\n### Summary\n\nOn Windows, attacker-controlled content in a wheel's\n`.dist-info/namespace_packages.txt` can cause setuptools' legacy wheel\ninstallation path to create an `__init__.py` outside the requested\n`destination_eggdir`.\n\nThe attacker can influence the destination path, but not the contents of\nthe created file.\n\n### Details\n\nTested setuptools commit:\n\n`6ead555c5fb29bc57fe6105b1bffc163f56fd558`\n\nRelevant source:\n\n`setuptools/wheel.py`\n\nSHA-256:\n\n`359b7e0d5dd8c3135653abe08a8ed5dc0352eadfd7df22cb5e2b5303b7c3cafd`\n\nThe relevant call path is:\n\n`Wheel(wheel_path).install_as_egg(destination)`\n→ `_install_as_egg`\n→ `_convert_metadata`\n→ `_fix_namespace_packages`\n\nA wheel can provide attacker-controlled content in:\n\n`\u003cdistribution\u003e.dist-info/namespace_packages.txt`\n\nThe namespace value is eventually used approximately as:\n\n```python\nmod_dir = os.path.join(destination_eggdir, *mod.split('.'))\nmod_init = os.path.join(mod_dir, '__init__.py')\n\nIf mod is a Windows drive-qualified absolute path containing no dots,\nmod.split('.') preserves it as a single component.\nOn Windows, os.path.join(destination_eggdir, absolute_component) discards\nthe original base directory and resolves to the attacker-supplied absolute\npath.\nThe existing wheel filename and ZIP traversal checks do not validate this\nmetadata value before it is subsequently interpreted as a filesystem path.\n\n```markdown\n### PoC\n\nThe reproduction was performed entirely inside a disposable temporary\ndirectory.\n\nLayout:\n\n```text\nsandbox/\n    destination/\n    outside/\n    input/\n    canary.txt\n```\n\nA synthetic wheel was created containing:\n\n`demo_pkg-1.0.dist-info/namespace_packages.txt`\n\nwhose content was the absolute path of:\n\n`sandbox\\outside`\n\nThe real acquired setuptools implementation was then invoked:\n\n```python\nsetuptools.wheel.Wheel(synthetic_wheel).install_as_egg(\n    sandbox_destination\n)\n```\n\nThe operation completed without exception.\n\nExpected metadata was created under:\n\n`sandbox\\destination\\EGG-INFO`\n\nbut setuptools also created:\n\n`sandbox\\outside\\__init__.py`\n\nThe file did not exist before execution.\n\nIts contents were:\n\n```python\n__import__('pkg_resources').declare_namespace(__name__)\n```\n\nThe unrelated canary remained byte-identical.\n\nThe sandbox was deleted after recording the evidence.\n```\n\n\n### Impact\n\nA crafted wheel can cause setuptools to create a fixed-content\n`__init__.py` outside the intended installation directory at a\nfilesystem path influenced by the wheel, with the permissions of the\nprocess performing the installation.\n\nThe demonstrated reproduction required the target parent directory to\nalready exist.",
+                "markdown": "**Vulnerability GHSA-xmj3-9gf7-h52w**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|setuptools|84.1.0|[GHSA-xmj3-9gf7-h52w](https://github.com/advisories/GHSA-xmj3-9gf7-h52w)|\n\n### Summary\n\nOn Windows, attacker-controlled content in a wheel's\n`.dist-info/namespace_packages.txt` can cause setuptools' legacy wheel\ninstallation path to create an `__init__.py` outside the requested\n`destination_eggdir`.\n\nThe attacker can influence the destination path, but not the contents of\nthe created file.\n\n### Details\n\nTested setuptools commit:\n\n`6ead555c5fb29bc57fe6105b1bffc163f56fd558`\n\nRelevant source:\n\n`setuptools/wheel.py`\n\nSHA-256:\n\n`359b7e0d5dd8c3135653abe08a8ed5dc0352eadfd7df22cb5e2b5303b7c3cafd`\n\nThe relevant call path is:\n\n`Wheel(wheel_path).install_as_egg(destination)`\n→ `_install_as_egg`\n→ `_convert_metadata`\n→ `_fix_namespace_packages`\n\nA wheel can provide attacker-controlled content in:\n\n`\u003cdistribution\u003e.dist-info/namespace_packages.txt`\n\nThe namespace value is eventually used approximately as:\n\n```python\nmod_dir = os.path.join(destination_eggdir, *mod.split('.'))\nmod_init = os.path.join(mod_dir, '__init__.py')\n\nIf mod is a Windows drive-qualified absolute path containing no dots,\nmod.split('.') preserves it as a single component.\nOn Windows, os.path.join(destination_eggdir, absolute_component) discards\nthe original base directory and resolves to the attacker-supplied absolute\npath.\nThe existing wheel filename and ZIP traversal checks do not validate this\nmetadata value before it is subsequently interpreted as a filesystem path.\n\n```markdown\n### PoC\n\nThe reproduction was performed entirely inside a disposable temporary\ndirectory.\n\nLayout:\n\n```text\nsandbox/\n    destination/\n    outside/\n    input/\n    canary.txt\n```\n\nA synthetic wheel was created containing:\n\n`demo_pkg-1.0.dist-info/namespace_packages.txt`\n\nwhose content was the absolute path of:\n\n`sandbox\\outside`\n\nThe real acquired setuptools implementation was then invoked:\n\n```python\nsetuptools.wheel.Wheel(synthetic_wheel).install_as_egg(\n    sandbox_destination\n)\n```\n\nThe operation completed without exception.\n\nExpected metadata was created under:\n\n`sandbox\\destination\\EGG-INFO`\n\nbut setuptools also created:\n\n`sandbox\\outside\\__init__.py`\n\nThe file did not exist before execution.\n\nIts contents were:\n\n```python\n__import__('pkg_resources').declare_namespace(__name__)\n```\n\nThe unrelated canary remained byte-identical.\n\nThe sandbox was deleted after recording the evidence.\n```\n\n\n### Impact\n\nA crafted wheel can cause setuptools to create a fixed-content\n`__init__.py` outside the intended installation directory at a\nfilesystem path influenced by the wheel, with the permissions of the\nprocess performing the installation.\n\nThe demonstrated reproduction required the target parent directory to\nalready exist."
+              },
+              "properties": {
+                "cvssv40_baseScore": 1,
+                "cvssv40_vector": "CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:A/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "2.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-40898",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli"
+              },
+              "fullDescription": {
+                "text": "An issue discovered in Python Packaging Authority (PyPA) Wheel 0.37.1 and earlier allows remote attackers to cause a denial of service via attacker controlled input to wheel cli."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-40898",
+              "help": {
+                "text": "Vulnerability CVE-2022-40898\nSeverity: HIGH\nPackage: wheel\nFixed Version: 0.38.1\nLink: [CVE-2022-40898](https://avd.aquasec.com/nvd/cve-2022-40898)\nAn issue discovered in Python Packaging Authority (PyPA) Wheel 0.37.1 and earlier allows remote attackers to cause a denial of service via attacker controlled input to wheel cli.",
+                "markdown": "**Vulnerability CVE-2022-40898**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|wheel|0.38.1|[CVE-2022-40898](https://avd.aquasec.com/nvd/cve-2022-40898)|\n\nAn issue discovered in Python Packaging Authority (PyPA) Wheel 0.37.1 and earlier allows remote attackers to cause a denial of service via attacker controlled input to wheel cli."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.5,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            }
+          ],
+          "version": "0.76.2"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "CVE-2018-20843",
+          "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "Package: expat\nInstalled Version: 2.2.6-r0\nVulnerability CVE-2018-20843\nSeverity: HIGH\nFixed Version: 2.2.7-r0\nLink: [CVE-2018-20843](https://avd.aquasec.com/nvd/cve-2018-20843)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: expat@2.2.6-r0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-15903",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "Package: expat\nInstalled Version: 2.2.6-r0\nVulnerability CVE-2019-15903\nSeverity: HIGH\nFixed Version: 2.2.7-r1\nLink: [CVE-2019-15903](https://avd.aquasec.com/nvd/cve-2019-15903)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: expat@2.2.6-r0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-12900",
+          "ruleIndex": 2,
+          "level": "error",
+          "message": {
+            "text": "Package: libbz2\nInstalled Version: 1.0.6-r6\nVulnerability CVE-2019-12900\nSeverity: CRITICAL\nFixed Version: 1.0.6-r7\nLink: [CVE-2019-12900](https://avd.aquasec.com/nvd/cve-2019-12900)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libbz2@1.0.6-r6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-1543",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Package: libcrypto1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2019-1543\nSeverity: HIGH\nFixed Version: 1.1.1b-r1\nLink: [CVE-2019-1543](https://avd.aquasec.com/nvd/cve-2019-1543)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libcrypto1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-1967",
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "Package: libcrypto1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2020-1967\nSeverity: HIGH\nFixed Version: 1.1.1g-r0\nLink: [CVE-2020-1967](https://avd.aquasec.com/nvd/cve-2020-1967)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libcrypto1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-23840",
+          "ruleIndex": 5,
+          "level": "error",
+          "message": {
+            "text": "Package: libcrypto1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2021-23840\nSeverity: HIGH\nFixed Version: 1.1.1j-r0\nLink: [CVE-2021-23840](https://avd.aquasec.com/nvd/cve-2021-23840)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libcrypto1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-3450",
+          "ruleIndex": 6,
+          "level": "error",
+          "message": {
+            "text": "Package: libcrypto1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2021-3450\nSeverity: HIGH\nFixed Version: 1.1.1k-r0\nLink: [CVE-2021-3450](https://avd.aquasec.com/nvd/cve-2021-3450)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libcrypto1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-1547",
+          "ruleIndex": 7,
+          "level": "warning",
+          "message": {
+            "text": "Package: libcrypto1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2019-1547\nSeverity: MEDIUM\nFixed Version: 1.1.1d-r0\nLink: [CVE-2019-1547](https://avd.aquasec.com/nvd/cve-2019-1547)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libcrypto1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-1549",
+          "ruleIndex": 8,
+          "level": "warning",
+          "message": {
+            "text": "Package: libcrypto1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2019-1549\nSeverity: MEDIUM\nFixed Version: 1.1.1d-r0\nLink: [CVE-2019-1549](https://avd.aquasec.com/nvd/cve-2019-1549)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libcrypto1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-1551",
+          "ruleIndex": 9,
+          "level": "warning",
+          "message": {
+            "text": "Package: libcrypto1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2019-1551\nSeverity: MEDIUM\nFixed Version: 1.1.1d-r2\nLink: [CVE-2019-1551](https://avd.aquasec.com/nvd/cve-2019-1551)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libcrypto1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-1971",
+          "ruleIndex": 10,
+          "level": "warning",
+          "message": {
+            "text": "Package: libcrypto1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2020-1971\nSeverity: MEDIUM\nFixed Version: 1.1.1i-r0\nLink: [CVE-2020-1971](https://avd.aquasec.com/nvd/cve-2020-1971)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libcrypto1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-23841",
+          "ruleIndex": 11,
+          "level": "warning",
+          "message": {
+            "text": "Package: libcrypto1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2021-23841\nSeverity: MEDIUM\nFixed Version: 1.1.1j-r0\nLink: [CVE-2021-23841](https://avd.aquasec.com/nvd/cve-2021-23841)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libcrypto1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-3449",
+          "ruleIndex": 12,
+          "level": "warning",
+          "message": {
+            "text": "Package: libcrypto1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2021-3449\nSeverity: MEDIUM\nFixed Version: 1.1.1k-r0\nLink: [CVE-2021-3449](https://avd.aquasec.com/nvd/cve-2021-3449)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libcrypto1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-1563",
+          "ruleIndex": 13,
+          "level": "note",
+          "message": {
+            "text": "Package: libcrypto1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2019-1563\nSeverity: LOW\nFixed Version: 1.1.1d-r0\nLink: [CVE-2019-1563](https://avd.aquasec.com/nvd/cve-2019-1563)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libcrypto1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-23839",
+          "ruleIndex": 14,
+          "level": "note",
+          "message": {
+            "text": "Package: libcrypto1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2021-23839\nSeverity: LOW\nFixed Version: 1.1.1j-r0\nLink: [CVE-2021-23839](https://avd.aquasec.com/nvd/cve-2021-23839)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libcrypto1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-1543",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Package: libssl1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2019-1543\nSeverity: HIGH\nFixed Version: 1.1.1b-r1\nLink: [CVE-2019-1543](https://avd.aquasec.com/nvd/cve-2019-1543)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libssl1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-1967",
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "Package: libssl1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2020-1967\nSeverity: HIGH\nFixed Version: 1.1.1g-r0\nLink: [CVE-2020-1967](https://avd.aquasec.com/nvd/cve-2020-1967)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libssl1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-23840",
+          "ruleIndex": 5,
+          "level": "error",
+          "message": {
+            "text": "Package: libssl1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2021-23840\nSeverity: HIGH\nFixed Version: 1.1.1j-r0\nLink: [CVE-2021-23840](https://avd.aquasec.com/nvd/cve-2021-23840)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libssl1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-3450",
+          "ruleIndex": 6,
+          "level": "error",
+          "message": {
+            "text": "Package: libssl1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2021-3450\nSeverity: HIGH\nFixed Version: 1.1.1k-r0\nLink: [CVE-2021-3450](https://avd.aquasec.com/nvd/cve-2021-3450)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libssl1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-1547",
+          "ruleIndex": 7,
+          "level": "warning",
+          "message": {
+            "text": "Package: libssl1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2019-1547\nSeverity: MEDIUM\nFixed Version: 1.1.1d-r0\nLink: [CVE-2019-1547](https://avd.aquasec.com/nvd/cve-2019-1547)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libssl1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-1549",
+          "ruleIndex": 8,
+          "level": "warning",
+          "message": {
+            "text": "Package: libssl1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2019-1549\nSeverity: MEDIUM\nFixed Version: 1.1.1d-r0\nLink: [CVE-2019-1549](https://avd.aquasec.com/nvd/cve-2019-1549)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libssl1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-1551",
+          "ruleIndex": 9,
+          "level": "warning",
+          "message": {
+            "text": "Package: libssl1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2019-1551\nSeverity: MEDIUM\nFixed Version: 1.1.1d-r2\nLink: [CVE-2019-1551](https://avd.aquasec.com/nvd/cve-2019-1551)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libssl1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-1971",
+          "ruleIndex": 10,
+          "level": "warning",
+          "message": {
+            "text": "Package: libssl1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2020-1971\nSeverity: MEDIUM\nFixed Version: 1.1.1i-r0\nLink: [CVE-2020-1971](https://avd.aquasec.com/nvd/cve-2020-1971)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libssl1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-23841",
+          "ruleIndex": 11,
+          "level": "warning",
+          "message": {
+            "text": "Package: libssl1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2021-23841\nSeverity: MEDIUM\nFixed Version: 1.1.1j-r0\nLink: [CVE-2021-23841](https://avd.aquasec.com/nvd/cve-2021-23841)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libssl1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-3449",
+          "ruleIndex": 12,
+          "level": "warning",
+          "message": {
+            "text": "Package: libssl1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2021-3449\nSeverity: MEDIUM\nFixed Version: 1.1.1k-r0\nLink: [CVE-2021-3449](https://avd.aquasec.com/nvd/cve-2021-3449)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libssl1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-1563",
+          "ruleIndex": 13,
+          "level": "note",
+          "message": {
+            "text": "Package: libssl1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2019-1563\nSeverity: LOW\nFixed Version: 1.1.1d-r0\nLink: [CVE-2019-1563](https://avd.aquasec.com/nvd/cve-2019-1563)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libssl1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-23839",
+          "ruleIndex": 14,
+          "level": "note",
+          "message": {
+            "text": "Package: libssl1.1\nInstalled Version: 1.1.1a-r1\nVulnerability CVE-2021-23839\nSeverity: LOW\nFixed Version: 1.1.1j-r0\nLink: [CVE-2021-23839](https://avd.aquasec.com/nvd/cve-2021-23839)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: libssl1.1@1.1.1a-r1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-14697",
+          "ruleIndex": 15,
+          "level": "error",
+          "message": {
+            "text": "Package: musl\nInstalled Version: 1.1.20-r4\nVulnerability CVE-2019-14697\nSeverity: CRITICAL\nFixed Version: 1.1.20-r5\nLink: [CVE-2019-14697](https://avd.aquasec.com/nvd/cve-2019-14697)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: musl@1.1.20-r4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-28928",
+          "ruleIndex": 16,
+          "level": "warning",
+          "message": {
+            "text": "Package: musl\nInstalled Version: 1.1.20-r4\nVulnerability CVE-2020-28928\nSeverity: MEDIUM\nFixed Version: 1.1.20-r6\nLink: [CVE-2020-28928](https://avd.aquasec.com/nvd/cve-2020-28928)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: musl@1.1.20-r4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-14697",
+          "ruleIndex": 15,
+          "level": "error",
+          "message": {
+            "text": "Package: musl-utils\nInstalled Version: 1.1.20-r4\nVulnerability CVE-2019-14697\nSeverity: CRITICAL\nFixed Version: 1.1.20-r5\nLink: [CVE-2019-14697](https://avd.aquasec.com/nvd/cve-2019-14697)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: musl-utils@1.1.20-r4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-28928",
+          "ruleIndex": 16,
+          "level": "warning",
+          "message": {
+            "text": "Package: musl-utils\nInstalled Version: 1.1.20-r4\nVulnerability CVE-2020-28928\nSeverity: MEDIUM\nFixed Version: 1.1.20-r6\nLink: [CVE-2020-28928](https://avd.aquasec.com/nvd/cve-2020-28928)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: musl-utils@1.1.20-r4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-8457",
+          "ruleIndex": 17,
+          "level": "error",
+          "message": {
+            "text": "Package: sqlite-libs\nInstalled Version: 3.26.0-r3\nVulnerability CVE-2019-8457\nSeverity: CRITICAL\nFixed Version: 3.28.0-r0\nLink: [CVE-2019-8457](https://avd.aquasec.com/nvd/cve-2019-8457)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: sqlite-libs@3.26.0-r3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-19244",
+          "ruleIndex": 18,
+          "level": "error",
+          "message": {
+            "text": "Package: sqlite-libs\nInstalled Version: 3.26.0-r3\nVulnerability CVE-2019-19244\nSeverity: HIGH\nFixed Version: 3.28.0-r2\nLink: [CVE-2019-19244](https://avd.aquasec.com/nvd/cve-2019-19244)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: sqlite-libs@3.26.0-r3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-5018",
+          "ruleIndex": 19,
+          "level": "error",
+          "message": {
+            "text": "Package: sqlite-libs\nInstalled Version: 3.26.0-r3\nVulnerability CVE-2019-5018\nSeverity: HIGH\nFixed Version: 3.28.0-r0\nLink: [CVE-2019-5018](https://avd.aquasec.com/nvd/cve-2019-5018)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: sqlite-libs@3.26.0-r3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-11655",
+          "ruleIndex": 20,
+          "level": "error",
+          "message": {
+            "text": "Package: sqlite-libs\nInstalled Version: 3.26.0-r3\nVulnerability CVE-2020-11655\nSeverity: HIGH\nFixed Version: 3.28.0-r3\nLink: [CVE-2020-11655](https://avd.aquasec.com/nvd/cve-2020-11655)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: sqlite-libs@3.26.0-r3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-16168",
+          "ruleIndex": 21,
+          "level": "warning",
+          "message": {
+            "text": "Package: sqlite-libs\nInstalled Version: 3.26.0-r3\nVulnerability CVE-2019-16168\nSeverity: MEDIUM\nFixed Version: 3.28.0-r1\nLink: [CVE-2019-16168](https://avd.aquasec.com/nvd/cve-2019-16168)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: sqlite-libs@3.26.0-r3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-19242",
+          "ruleIndex": 22,
+          "level": "warning",
+          "message": {
+            "text": "Package: sqlite-libs\nInstalled Version: 3.26.0-r3\nVulnerability CVE-2019-19242\nSeverity: MEDIUM\nFixed Version: 3.28.0-r2\nLink: [CVE-2019-19242](https://avd.aquasec.com/nvd/cve-2019-19242)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/python",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/python: sqlite-libs@3.26.0-r3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-20916",
+          "ruleIndex": 23,
+          "level": "error",
+          "message": {
+            "text": "Package: pip\nInstalled Version: 19.0.3\nVulnerability CVE-2019-20916\nSeverity: HIGH\nFixed Version: 19.2\nLink: [CVE-2019-20916](https://avd.aquasec.com/nvd/cve-2019-20916)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA: pip@19.0.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-3572",
+          "ruleIndex": 24,
+          "level": "error",
+          "message": {
+            "text": "Package: pip\nInstalled Version: 19.0.3\nVulnerability CVE-2021-3572\nSeverity: HIGH\nFixed Version: 21.1\nLink: [CVE-2021-3572](https://avd.aquasec.com/nvd/cve-2021-3572)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA: pip@19.0.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-5752",
+          "ruleIndex": 25,
+          "level": "warning",
+          "message": {
+            "text": "Package: pip\nInstalled Version: 19.0.3\nVulnerability CVE-2023-5752\nSeverity: MEDIUM\nFixed Version: 23.3\nLink: [CVE-2023-5752](https://avd.aquasec.com/nvd/cve-2023-5752)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA: pip@19.0.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-8869",
+          "ruleIndex": 26,
+          "level": "warning",
+          "message": {
+            "text": "Package: pip\nInstalled Version: 19.0.3\nVulnerability CVE-2025-8869\nSeverity: MEDIUM\nFixed Version: 25.3\nLink: [CVE-2025-8869](https://avd.aquasec.com/nvd/cve-2025-8869)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA: pip@19.0.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-13346",
+          "ruleIndex": 27,
+          "level": "warning",
+          "message": {
+            "text": "Package: pip\nInstalled Version: 19.0.3\nVulnerability CVE-2026-13346\nSeverity: MEDIUM\nFixed Version: 26.2.0\nLink: [CVE-2026-13346](https://avd.aquasec.com/nvd/cve-2026-13346)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA: pip@19.0.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-3219",
+          "ruleIndex": 28,
+          "level": "warning",
+          "message": {
+            "text": "Package: pip\nInstalled Version: 19.0.3\nVulnerability CVE-2026-3219\nSeverity: MEDIUM\nFixed Version: 26.1\nLink: [CVE-2026-3219](https://avd.aquasec.com/nvd/cve-2026-3219)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA: pip@19.0.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-6357",
+          "ruleIndex": 29,
+          "level": "warning",
+          "message": {
+            "text": "Package: pip\nInstalled Version: 19.0.3\nVulnerability CVE-2026-6357\nSeverity: MEDIUM\nFixed Version: 26.1\nLink: [CVE-2026-6357](https://avd.aquasec.com/nvd/cve-2026-6357)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA: pip@19.0.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-8643",
+          "ruleIndex": 30,
+          "level": "warning",
+          "message": {
+            "text": "Package: pip\nInstalled Version: 19.0.3\nVulnerability CVE-2026-8643\nSeverity: MEDIUM\nFixed Version: 26.1.2\nLink: [CVE-2026-8643](https://avd.aquasec.com/nvd/cve-2026-8643)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA: pip@19.0.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-1703",
+          "ruleIndex": 31,
+          "level": "note",
+          "message": {
+            "text": "Package: pip\nInstalled Version: 19.0.3\nVulnerability CVE-2026-1703\nSeverity: LOW\nFixed Version: 26.0\nLink: [CVE-2026-1703](https://avd.aquasec.com/nvd/cve-2026-1703)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/pip-19.0.3.dist-info/METADATA: pip@19.0.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-40897",
+          "ruleIndex": 32,
+          "level": "error",
+          "message": {
+            "text": "Package: setuptools\nInstalled Version: 40.8.0\nVulnerability CVE-2022-40897\nSeverity: HIGH\nFixed Version: 65.5.1\nLink: [CVE-2022-40897](https://avd.aquasec.com/nvd/cve-2022-40897)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/setuptools-40.8.0.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/setuptools-40.8.0.dist-info/METADATA: setuptools@40.8.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-6345",
+          "ruleIndex": 33,
+          "level": "error",
+          "message": {
+            "text": "Package: setuptools\nInstalled Version: 40.8.0\nVulnerability CVE-2024-6345\nSeverity: HIGH\nFixed Version: 70.0.0\nLink: [CVE-2024-6345](https://avd.aquasec.com/nvd/cve-2024-6345)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/setuptools-40.8.0.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/setuptools-40.8.0.dist-info/METADATA: setuptools@40.8.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-47273",
+          "ruleIndex": 34,
+          "level": "error",
+          "message": {
+            "text": "Package: setuptools\nInstalled Version: 40.8.0\nVulnerability CVE-2025-47273\nSeverity: HIGH\nFixed Version: 78.1.1\nLink: [CVE-2025-47273](https://avd.aquasec.com/nvd/cve-2025-47273)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/setuptools-40.8.0.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/setuptools-40.8.0.dist-info/METADATA: setuptools@40.8.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-59890",
+          "ruleIndex": 35,
+          "level": "warning",
+          "message": {
+            "text": "Package: setuptools\nInstalled Version: 40.8.0\nVulnerability CVE-2026-59890\nSeverity: MEDIUM\nFixed Version: 83.0.0\nLink: [CVE-2026-59890](https://avd.aquasec.com/nvd/cve-2026-59890)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/setuptools-40.8.0.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/setuptools-40.8.0.dist-info/METADATA: setuptools@40.8.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "GHSA-xmj3-9gf7-h52w",
+          "ruleIndex": 36,
+          "level": "note",
+          "message": {
+            "text": "Package: setuptools\nInstalled Version: 40.8.0\nVulnerability GHSA-xmj3-9gf7-h52w\nSeverity: LOW\nFixed Version: 84.1.0\nLink: [GHSA-xmj3-9gf7-h52w](https://github.com/advisories/GHSA-xmj3-9gf7-h52w)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/setuptools-40.8.0.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/setuptools-40.8.0.dist-info/METADATA: setuptools@40.8.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-40898",
+          "ruleIndex": 37,
+          "level": "error",
+          "message": {
+            "text": "Package: wheel\nInstalled Version: 0.33.1\nVulnerability CVE-2022-40898\nSeverity: HIGH\nFixed Version: 0.38.1\nLink: [CVE-2022-40898](https://avd.aquasec.com/nvd/cve-2022-40898)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/lib/python3.4/site-packages/wheel-0.33.1.dist-info/METADATA",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/lib/python3.4/site-packages/wheel-0.33.1.dist-info/METADATA: wheel@0.33.1"
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits",
+      "properties": {
+        "imageID": "sha256:c06adcf62f6ef21ae5c586552532b04b693f9ab6df377d7ea066fd682c470864",
+        "imageName": "python:3.4-alpine",
+        "repoDigests": [
+          "python@sha256:c210b660e2ea553a7afa23b41a6ed112f85dbce25cbcb567c75dfe05342a4c4b"
+        ],
+        "repoTags": [
+          "python:3.4-alpine"
+        ]
+      }
+    }
+  ]
+}
