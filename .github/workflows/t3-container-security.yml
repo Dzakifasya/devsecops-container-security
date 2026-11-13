@@ -1,0 +1,35 @@
+﻿name: Tugas 3 - Container Security Scan
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  trivy-scan:
+    name: Build and Scan Flask Image
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build Flask Docker Image
+        run: |
+          docker build \
+            -f "Tugas Praktikum/Tugas 2/Dockerfile" \
+            -t flask-secure:ci \
+            "Tugas Praktikum/Tugas 2"
+
+      - name: Scan Image with Trivy
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: flask-secure:ci
+          format: table
+          exit-code: '0'
+          ignore-unfixed: true
+          vuln-type: os,library
+          severity: CRITICAL,HIGH
