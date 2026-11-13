@@ -1,0 +1,12 @@
+﻿.env
+.env.*
+.git
+.gitignore
+__pycache__/
+*.py[cod]
+*.log
+.pytest_cache/
+.venv/
+venv/
+tests/
+trivy-report.json
